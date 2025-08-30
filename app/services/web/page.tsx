@@ -24,7 +24,6 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-
 const steps = [
   {
     title: '1. Razgovor',

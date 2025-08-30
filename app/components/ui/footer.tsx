@@ -135,10 +135,6 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-blue-400 mt-0.5" />
-                <span className="text-slate-400">099 662 4315</span>
-              </li>
-              <li className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-blue-400 mt-0.5" />
                 <span className="text-slate-400">7:00 - 19:00</span>
               </li>
