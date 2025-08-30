@@ -1,6 +1,25 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Star, Quote, User } from 'lucide-react';
+import React from 'react';
+
+// Simple ReadMore component
+function ReadMore({ text, maxLength }: { text: string; maxLength: number }) {
+  const [expanded, setExpanded] = React.useState(false);
+  if (text.length <= maxLength) return <p className="mb-4 text-slate-200">{text}</p>;
+  return (
+    <p className="mb-4 text-slate-200">
+      {expanded ? text : text.slice(0, maxLength) + '...'}
+      <button
+        className="ml-2 text-blue-400 underline"
+        onClick={() => setExpanded(!expanded)}
+        aria-label={expanded ? 'Show less' : 'Read more'}
+      >
+        {expanded ? 'Prikaži manje' : 'Pročitaj više'}
+      </button>
+    </p>
+  );
+}
 
 // Keys for translations
 export function Testimonials() {
@@ -8,7 +27,7 @@ export function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      quoteKey: 'Odlična usluga i podrška!',
+      quoteKey: 'Kristijan je nudio pomoć čim je čuo za moj projekt kupovanja novog pc-a, pomogao mi je u kupovanju komponenti, tj. u tome da odaberem one koje pašu u build te su istovremeno dobre. Preko poruka odgovarao mi je na mnoga moja pitanja, a kada je došlo da fizički trebam njegovu pomoć pri instaliranju Windows 11 sustava, nakon 5 minuta razgovora je krenio i bio ovdje za manje od pola sata. Uz to sve pomogao mi je urediti moj radni stol, postaviti monitor, prebaciti kablove iz starog pc u novi i instalirati Windows. Stvarno nemam prigovora uz sve je još bio i opušten i marljiv. Hvala mu na svemu!',
       authorKey: 'Karlo Arčić',
       roleKey: 'Instalacija Windows 11 sustava i postavljanje uređaja',
       rating: 5
@@ -53,9 +72,7 @@ export function Testimonials() {
                 ))}
               </div>
               <Quote className="w-8 h-8 text-blue-400/30 mb-4" />
-              <p className="text-lg text-slate-300 mb-6">
-                {testimonial.quoteKey}
-              </p>
+                <ReadMore text={testimonial.quoteKey} maxLength={100} />
               <div className="flex items-center">
                 <div className="bg-blue-500/10 p-2 rounded-full">
                   <User className="w-6 h-6 text-blue-400" />
