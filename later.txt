@@ -1,0 +1,797 @@
+buisness
+
+<main className="bg-slate-950 text-white">
+      {/* Hero Section */}
+      <section className="py-24 px-4 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mx-auto"
+        >
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+            Povećajte učinkovitost svog poslovanja uz{' '}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
+              Microsoft 365
+            </span>
+          </h1>
+          <p className="text-slate-400 text-lg">
+            Pomažemo malim i srednjim poduzećima da optimiziraju poslovanje putem automatizacije, 
+            suradnje i pametnih alata za podatke koristeći integracije s Microsoftom 365, 
+            SharePointom, Power Automateom i Excelom.
+          </p>
+          <div className="mt-8">
+            <Link
+              href="#contact"
+              className="inline-block bg-blue-500 hover:bg-blue-600 transition-colors text-white font-semibold py-3 px-6 rounded-xl"
+            >
+              Započnite danas!
+            </Link>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* What We Offer */}
+      <section className="py-20 px-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {[
+            {
+              icon: <Repeat2 className="w-8 h-8 text-blue-400" />,
+              title: 'Power Automate Workflows',
+              desc: 'Automate repetitive tasks like approvals, document routing, and notifications.'
+            },
+            {
+              icon: <Table2 className="w-8 h-8 text-blue-400" />,
+              title: 'Excel Integrations',
+              desc: 'Link Excel with live data sources for real-time dashboards and reports.'
+            },
+            {
+              icon: <FolderKanban className="w-8 h-8 text-blue-400" />,
+              title: 'SharePoint Solutions',
+              desc: 'Organize company data with modern SharePoint intranets and project hubs.'
+            },
+            {
+              icon: <FileBarChart2 className="w-8 h-8 text-blue-400" />,
+              title: 'Business Templates',
+              desc: 'Deploy curated Microsoft 365 templates to hit the ground running.'
+            }
+          ].map(({ icon, title, desc }) => (
+            <motion.div
+              key={title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-slate-900 border border-slate-800 rounded-xl p-6"
+            >
+              <div className="mb-4">{icon}</div>
+              <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
+              <p className="text-slate-400">{desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20 px-4 bg-slate-900">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Why Our Microsoft 365 Solutions Work for SMBs</h2>
+          <ul className="space-y-4 text-left text-slate-300">
+            {[
+              'Save time with automation',
+              'Centralize documents and knowledge',
+              'Enable remote and hybrid collaboration',
+              'Reduce human error',
+              'Scale without overhauling infrastructure'
+            ].map((benefit, index) => (
+              <li key={index} className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-blue-400 mr-3 mt-1" />
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Process Reuse */}
+      <section className="py-20 px-4 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { title: 'Discovery', desc: 'We analyze your current tools and workflow.' },
+            { title: 'Planning', desc: 'We identify what can be automated or improved.' },
+            { title: 'Implementation', desc: 'We deploy Microsoft 365, templates, and flows.' },
+            { title: 'Training & Support', desc: 'We guide your team and offer ongoing help.' }
+          ].map(({ title, desc }, i) => (
+            <motion.div
+              key={title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className="bg-slate-900 border border-slate-800 p-6 rounded-xl"
+            >
+              <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
+              <p className="text-slate-400">{desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 px-4 text-center bg-gradient-to-r from-blue-500/10 to-indigo-500/10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mx-auto"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Ready to optimize your business?
+          </h2>
+          <p className="text-slate-300 mb-6">
+            Schedule a free consultation and let us show you how Microsoft 365 can transform your operations.
+          </p>
+          <Link
+            href="mailto:trycaze@proton.me"
+            className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl"
+          >
+            Contact Us
+          </Link>
+        </motion.div>
+      </section>
+    </main>
+
+    networking
+
+        <main className="container mx-auto px-4 py-24 text-white">
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl mx-auto text-center mb-20"
+      >
+        <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          Network Infrastructure Setup & Maintenance
+        </h1>
+        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          Reliable, secure, and scalable networking solutions for homes and businesses. From initial design to installation and ongoing maintenance, we ensure smooth and secure connectivity.
+        </p>
+      </motion.section>
+
+      {/* What We Do */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">Comprehensive Networking Services</h2>
+            <ul className="space-y-4 text-slate-300">
+              <li>🌐 Wired and wireless network installation</li>
+              <li>📶 Wi-Fi optimization and coverage extension</li>
+              <li>🔧 Troubleshooting and performance diagnostics</li>
+              <li>🔒 Network security setup (firewalls, VLANs, guest access)</li>
+              <li>🏢 Office and multi-floor structured cabling</li>
+              <li>📡 Router, switch, and access point configuration</li>
+            </ul>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-slate-700">
+            <Image
+              src="/images/networking.jpg"
+              alt="Networking setup"
+              width={600}
+              height={400}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Our Approach */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-semibold mb-4">
+            Structured & Scalable Networking
+          </h2>
+          <p className="text-slate-400 text-lg">
+            We design networks to grow with your business or adapt to your home's digital needs. Our setups consider both current demand and future scalability.
+          </p>
+        </div>
+
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+          {[
+            { title: 'Network Assessment', desc: 'Evaluate environment, devices, and coverage' },
+            { title: 'Infrastructure Design', desc: 'Plan physical and logical network structure' },
+            { title: 'Installation', desc: 'Lay cabling, configure hardware, and label systems' },
+            { title: 'Security Layering', desc: 'Implement secure access, guest Wi-Fi, and firewall' },
+            { title: 'Testing', desc: 'Run connectivity and speed tests on all devices' },
+            { title: 'Maintenance & Support', desc: 'Offer regular checkups and remote support' },
+          ].map((step, idx) => (
+            <motion.div
+              key={idx}
+              whileHover={{ y: -5 }}
+              className="bg-slate-800/60 p-6 rounded-xl border border-slate-700"
+            >
+              <h3 className="text-white font-semibold mb-2">{step.title}</h3>
+              <p className="text-slate-400 text-sm">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Use Cases */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-semibold mb-8 text-center">Use Cases</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-800/60 border border-slate-700 p-6 rounded-xl">
+              <h3 className="text-lg font-semibold mb-3">🏢 Offices & Businesses</h3>
+              <ul className="text-slate-300 list-disc ml-5 space-y-2 text-sm">
+                <li>Reliable network for large file transfers</li>
+                <li>Guest Wi-Fi with access isolation</li>
+                <li>Meeting room Ethernet & VoIP lines</li>
+                <li>Cloud service connectivity (MS365, GDrive)</li>
+              </ul>
+            </div>
+            <div className="bg-slate-800/60 border border-slate-700 p-6 rounded-xl">
+              <h3 className="text-lg font-semibold mb-3">🏠 Homes & Apartments</h3>
+              <ul className="text-slate-300 list-disc ml-5 space-y-2 text-sm">
+                <li>Multi-device streaming with no dropouts</li>
+                <li>Smart home integration (IoT hubs, cameras)</li>
+                <li>Gaming-optimized latency routing</li>
+                <li>Wi-Fi range extension and mesh setups</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* CTA */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="text-center max-w-2xl mx-auto"
+      >
+        <h2 className="text-3xl font-bold mb-4">
+          Build a network that never lets you down
+        </h2>
+        <p className="text-slate-400 mb-6">
+          Whether you're wiring an office or boosting your home Wi-Fi, we’ve got the expertise to make it seamless.
+        </p>
+        <a
+          href="mailto:trycaze@proton.me"
+          className="inline-block bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-medium text-white"
+        >
+          Request Networking Service
+        </a>
+      </motion.section>
+    </main>
+
+    repairs
+
+        <main className="container mx-auto px-4 py-24 text-white">
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl mx-auto text-center mb-20"
+      >
+        <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          Tech Repairs & Maintenance
+        </h1>
+        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          Fast, reliable, and transparent repair services for PCs, laptops, and IT hardware. Whether you're experiencing hardware issues, software glitches, or performance slowdowns — we’ve got you covered.
+        </p>
+      </motion.section>
+
+      {/* Problems We Solve */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">What We Fix</h2>
+            <ul className="space-y-4 text-slate-300">
+              <li>🛠️ System crashes and blue screens (BSOD)</li>
+              <li>🦠 Virus and malware infections</li>
+              <li>💾 Hard drive failures & data access issues</li>
+              <li>🔥 Overheating or loud fans</li>
+              <li>⚡ Power supply and boot-up problems</li>
+              <li>🔌 Broken ports, keyboards, or screens</li>
+            </ul>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-slate-700">
+            <Image
+              src="/images/repair-tech.jpg"
+              alt="Tech repair"
+              width={600}
+              height={400}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Our Approach */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-semibold mb-4">
+            How We Approach Repairs
+          </h2>
+          <p className="text-slate-400 text-lg">
+            Every device we service starts with a full diagnostic check. From there, we provide a no-pressure, transparent quote and repair timeline. All work is done using certified parts and tools.
+          </p>
+        </div>
+
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+          {[
+            { title: 'Diagnostics', desc: 'Identify the root cause of your issue' },
+            { title: 'Quote', desc: 'Transparent pricing and clear timelines' },
+            { title: 'Repair', desc: 'Swift resolution with tested hardware & software' },
+            { title: 'Testing', desc: 'Stress-tested under real-world conditions' },
+            { title: 'Handover', desc: 'Explained and documented delivery' },
+            { title: 'Support', desc: 'Ongoing support if anything changes' },
+          ].map((step, idx) => (
+            <motion.div
+              key={idx}
+              whileHover={{ y: -5 }}
+              className="bg-slate-800/60 p-6 rounded-xl border border-slate-700"
+            >
+              <h3 className="text-white font-semibold mb-2">{step.title}</h3>
+              <p className="text-slate-400 text-sm">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Benefits */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+        className="mb-24 max-w-4xl mx-auto"
+      >
+        <h2 className="text-2xl font-semibold text-center mb-8">Why Choose Us?</h2>
+        <ul className="grid sm:grid-cols-2 gap-6 text-slate-300 text-base">
+          <li>✅ Fast turnaround times</li>
+          <li>✅ Transparent pricing</li>
+          <li>✅ Certified replacement parts</li>
+          <li>✅ Support for desktops, laptops, and peripherals</li>
+          <li>✅ Flexible pickup or drop-off options</li>
+          <li>✅ Friendly service — no tech snobbery</li>
+        </ul>
+      </motion.section>
+
+      {/* CTA */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="text-center max-w-2xl mx-auto"
+      >
+        <h2 className="text-3xl font-bold mb-4">
+          Need a repair? Let’s get it fixed.
+        </h2>
+        <p className="text-slate-400 mb-6">
+          Contact us today and we’ll help you get your system back in shape — quickly and painlessly.
+        </p>
+        <a
+          href="mailto:trycaze@proton.me"
+          className="inline-block bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-medium text-white"
+        >
+          Request Repair
+        </a>
+      </motion.section>
+    </main>
+
+    setup
+
+        <main className="container mx-auto px-4 py-24 text-white">
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl mx-auto text-center mb-20"
+      >
+        <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          System Setups & Configuration
+        </h1>
+        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          Complete setup services for desktops, laptops, and peripheral systems — tailored to your workflow and performance needs. From hardware installation to software configuration, we ensure everything works perfectly out of the box.
+        </p>
+      </motion.section>
+
+      {/* What We Set Up */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">We handle all types of setups</h2>
+            <ul className="space-y-4 text-slate-300">
+              <li>🖥️ Office workstation configuration</li>
+              <li>💻 Laptop initialization for remote teams</li>
+              <li>🎮 High-performance gaming setups</li>
+              <li>🖨️ Peripheral installation (printers, scanners, NAS)</li>
+              <li>⚙️ OS installation & driver configuration</li>
+              <li>🔒 User access setup & basic security layers</li>
+            </ul>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-slate-700">
+            <Image
+              src="/images/setup-tech.jpg"
+              alt="System setup"
+              width={600}
+              height={400}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Our Setup Workflow */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-semibold mb-4">
+            Our Setup Workflow
+          </h2>
+          <p className="text-slate-400 text-lg">
+            We don’t just plug things in — we tailor each configuration to your unique environment and requirements. Whether it’s a single system or an entire office network, our workflow ensures everything runs smoothly.
+          </p>
+        </div>
+
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+          {[
+            { title: 'Initial Planning', desc: 'Understand your needs, space, and use-case' },
+            { title: 'Hardware Installation', desc: 'Physically set up and cable management' },
+            { title: 'Software Setup', desc: 'Install OS, required apps, and updates' },
+            { title: 'Configuration', desc: 'Network, user profiles, and preferences' },
+            { title: 'Testing', desc: 'Run performance and connectivity checks' },
+            { title: 'Final Handoff', desc: 'Provide access details and onboarding tips' },
+          ].map((step, idx) => (
+            <motion.div
+              key={idx}
+              whileHover={{ y: -5 }}
+              className="bg-slate-800/60 p-6 rounded-xl border border-slate-700"
+            >
+              <h3 className="text-white font-semibold mb-2">{step.title}</h3>
+              <p className="text-slate-400 text-sm">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Business & Home Use Cases */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-semibold mb-8 text-center">Who is this for?</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-800/60 border border-slate-700 p-6 rounded-xl">
+              <h3 className="text-lg font-semibold mb-3">💼 For Businesses</h3>
+              <ul className="text-slate-300 list-disc ml-5 space-y-2 text-sm">
+                <li>New employee onboarding systems</li>
+                <li>Small business multi-device setups</li>
+                <li>Shared devices and account access</li>
+                <li>MS365 or Google Workspace integration</li>
+              </ul>
+            </div>
+            <div className="bg-slate-800/60 border border-slate-700 p-6 rounded-xl">
+              <h3 className="text-lg font-semibold mb-3">🏠 For Home Users</h3>
+              <ul className="text-slate-300 list-disc ml-5 space-y-2 text-sm">
+                <li>Gaming rigs and custom builds</li>
+                <li>Media centers or home office stations</li>
+                <li>Printer & storage setup (NAS, Wi-Fi drives)</li>
+                <li>Account migration and parental controls</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* CTA */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="text-center max-w-2xl mx-auto"
+      >
+        <h2 className="text-3xl font-bold mb-4">
+          Need a setup that just works?
+        </h2>
+        <p className="text-slate-400 mb-6">
+          Skip the frustration — we’ll handle the technical parts, so you can focus on getting to work.
+        </p>
+        <a
+          href="mailto:trycaze@proton.me"
+          className="inline-block bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-medium text-white"
+        >
+          Book Setup
+        </a>
+      </motion.section>
+    </main>
+
+    support
+
+        <main className="container mx-auto px-4 py-20 text-white">
+      {/* Hero Section */}
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.6 }}
+        className="text-center max-w-3xl mx-auto mb-20"
+      >
+        <h1 className="text-4xl font-bold mb-4">IT Support & Infrastructure</h1>
+        <p className="text-slate-400 text-lg">
+          Comprehensive technical support tailored for small and medium-sized businesses — covering both infrastructure and users.
+          Fast, reliable, and secure.
+        </p>
+      </motion.section>
+
+      {/* Features Grid */}
+      <motion.section 
+        initial={{ opacity: 0 }} 
+        whileInView={{ opacity: 1 }} 
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-28"
+      >
+        <div className="bg-slate-800 p-6 rounded-2xl shadow-md">
+          <Laptop2 className="text-blue-400 mb-4" size={32} />
+          <h3 className="text-xl font-semibold mb-2">User Support & Maintenance</h3>
+          <p className="text-slate-400">
+            End-user support for software, hardware, printers, connectivity issues and general troubleshooting.
+          </p>
+        </div>
+        <div className="bg-slate-800 p-6 rounded-2xl shadow-md">
+          <Server className="text-blue-400 mb-4" size={32} />
+          <h3 className="text-xl font-semibold mb-2">Infrastructure Support</h3>
+          <p className="text-slate-400">
+            Proactive monitoring and maintenance of networks, servers, routers, and cloud-based platforms.
+          </p>
+        </div>
+        <div className="bg-slate-800 p-6 rounded-2xl shadow-md">
+          <ShieldCheck className="text-blue-400 mb-4" size={32} />
+          <h3 className="text-xl font-semibold mb-2">Security & Data Protection</h3>
+          <p className="text-slate-400">
+            Antivirus, firewall, backups, and access control to keep your business secure and compliant.
+          </p>
+        </div>
+        <div className="bg-slate-800 p-6 rounded-2xl shadow-md">
+          <UserCheck className="text-blue-400 mb-4" size={32} />
+          <h3 className="text-xl font-semibold mb-2">Microsoft 365 Support</h3>
+          <p className="text-slate-400">
+            Assistance with Teams, OneDrive, SharePoint, Outlook, and Microsoft Office installations.
+          </p>
+        </div>
+        <div className="bg-slate-800 p-6 rounded-2xl shadow-md">
+          <HelpCircle className="text-blue-400 mb-4" size={32} />
+          <h3 className="text-xl font-semibold mb-2">Remote & On-Site Assistance</h3>
+          <p className="text-slate-400">
+            Fast remote troubleshooting and scheduled on-site visits when necessary — tailored to your availability.
+          </p>
+        </div>
+      </motion.section>
+
+      {/* How it Works / Our Approach */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl mx-auto mb-28"
+      >
+        <h2 className="text-3xl font-bold mb-8 text-center">How We Work</h2>
+        <ol className="space-y-6 border-l border-slate-700 pl-6">
+          <li>
+            <h4 className="text-lg font-semibold mb-1">1. Initial Assessment</h4>
+            <p className="text-slate-400">
+              We start with a quick audit of your IT environment to understand systems, pain points, and business needs.
+            </p>
+          </li>
+          <li>
+            <h4 className="text-lg font-semibold mb-1">2. Setup & Optimization</h4>
+            <p className="text-slate-400">
+              Based on the assessment, we install, update, secure, and optimize your systems for reliability.
+            </p>
+          </li>
+          <li>
+            <h4 className="text-lg font-semibold mb-1">3. Ongoing Support</h4>
+            <p className="text-slate-400">
+              We provide support as needed — via remote desktop, phone, or in person — ensuring you're never left waiting.
+            </p>
+          </li>
+        </ol>
+      </motion.section>
+
+      {/* Call to Action */}
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.5 }}
+        className="bg-blue-600/10 border border-blue-600 rounded-2xl py-12 px-6 text-center shadow-md"
+      >
+        <h3 className="text-2xl font-bold mb-4">Need reliable IT support?</h3>
+        <p className="text-slate-300 mb-6">
+          We're here to help your team stay productive and your systems stay secure. Let’s talk.
+        </p>
+        <a 
+          href="mailto:trycaze@proton.me"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition-all"
+        >
+          Get Support
+        </a>
+      </motion.section>
+    </main>
+
+    web
+
+        <main className="container mx-auto px-4 py-24 text-white">
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl mx-auto text-center mb-20"
+      >
+        <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          Custom Web Application Development
+        </h1>
+        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          Bespoke, performant web applications built with modern technologies — tailored to streamline your operations, enhance engagement, and grow your digital presence.
+        </p>
+      </motion.section>
+
+      {/* What We Do */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">Full-Service Development</h2>
+            <ul className="space-y-4 text-slate-300">
+              <li>🧱 Frontend & backend development with modern stacks</li>
+              <li>🎯 Responsive UI/UX tailored to your brand</li>
+              <li>🔌 Integration with third-party systems (APIs, CRMs, auth)</li>
+              <li>⚙️ CMS-based or headless architecture (e.g., WordPress, Sanity)</li>
+              <li>🔐 Secure and scalable infrastructure deployment</li>
+              <li>📈 SEO optimization and performance tuning</li>
+            </ul>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-slate-700">
+            <Image
+              src="/images/webdev.jpg"
+              alt="Web development in progress"
+              width={600}
+              height={400}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Our Approach */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-semibold mb-4">From Concept to Code</h2>
+          <p className="text-slate-400 text-lg">
+            Our agile approach ensures your project evolves with your goals. We build incrementally, test constantly, and collaborate closely.
+          </p>
+        </div>
+
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+          {[
+            { title: 'Discovery', desc: 'We identify goals, audiences, and core requirements' },
+            { title: 'Design', desc: 'Wireframes, UI mockups, and interactive prototypes' },
+            { title: 'Development', desc: 'Frontend/backend code, responsive layout, accessibility' },
+            { title: 'Integration', desc: 'APIs, analytics, CRM, CMS, payment systems' },
+            { title: 'Testing', desc: 'Manual and automated testing across devices' },
+            { title: 'Deployment & Support', desc: 'CI/CD setup, hosting, and ongoing care' },
+          ].map((step, idx) => (
+            <motion.div
+              key={idx}
+              whileHover={{ y: -5 }}
+              className="bg-slate-800/60 p-6 rounded-xl border border-slate-700"
+            >
+              <h3 className="text-white font-semibold mb-2">{step.title}</h3>
+              <p className="text-slate-400 text-sm">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Use Cases */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+        className="mb-24"
+      >
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-semibold mb-8 text-center">Use Cases</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-800/60 border border-slate-700 p-6 rounded-xl">
+              <h3 className="text-lg font-semibold mb-3">🏢 Business Applications</h3>
+              <ul className="text-slate-300 list-disc ml-5 space-y-2 text-sm">
+                <li>Custom dashboards for internal operations</li>
+                <li>Secure client portals & document centers</li>
+                <li>Process automation via forms and flows</li>
+                <li>Integration with tools like MS365, Google, Stripe</li>
+              </ul>
+            </div>
+            <div className="bg-slate-800/60 border border-slate-700 p-6 rounded-xl">
+              <h3 className="text-lg font-semibold mb-3">🌍 Public-Facing Websites</h3>
+              <ul className="text-slate-300 list-disc ml-5 space-y-2 text-sm">
+                <li>Modern marketing websites with CMS</li>
+                <li>Online booking and reservation systems</li>
+                <li>Blog & content publishing platforms</li>
+                <li>Landing pages for campaigns & ads</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* CTA */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="text-center max-w-2xl mx-auto"
+      >
+        <h2 className="text-3xl font-bold mb-4">
+          Let’s build your next digital product
+        </h2>
+        <p className="text-slate-400 mb-6">
+          From MVPs to full-scale applications — we deliver value through modern, maintainable code and great design.
+        </p>
+        <a
+          href="mailto:trycaze@proton.me"
+          className="inline-block bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-medium text-white"
+        >
+          Start Your Web Project
+        </a>
+      </motion.section>
+    </main>
+

@@ -1,0 +1,144 @@
+'use client';
+import { motion } from 'framer-motion';
+import { Download } from 'lucide-react';
+import Image from 'next/image';
+
+export default function CaseStudy() {
+  return (
+    <section className="relative bg-black text-slate-300 py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      {/* Background Grid */}
+      <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5 pointer-events-none" />
+
+      {/* Header */}
+      <div className="relative mb-16 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl sm:text-5xl font-bold text-white mb-4"
+        >
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
+            Case Study: Tech Solution for Client X
+          </span>
+        </motion.h1>
+        <p className="text-slate-400 max-w-xl mx-auto">
+          A breakdown of how we solved a complex IT problem for a real-world client using modern technologies and structured support.
+        </p>
+      </div>
+
+      {/* Sections */}
+      {[
+        { title: '1. Executive Summary', text: 'This project aimed to streamline internal operations for Client X through custom software and infrastructure upgrades. The result was a 40% increase in productivity and a significant reduction in support requests.' },
+        { title: '2. Introduction', text: 'Client X operates in the logistics sector and faced challenges with outdated systems, manual tracking, and frequent network issues. They approached us to modernize their workflow and boost team efficiency.' },
+        { title: '3. Findings', text: 'During our audit, we identified key bottlenecks: slow hardware, legacy software, and no central IT support policy. A mix of outdated Windows 10 devices and unstable networking setups caused repeated downtimes.' },
+      ].map((section, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1, duration: 0.5 }}
+          className="relative mb-12"
+        >
+          <h2 className="text-2xl font-semibold text-white mb-2">{section.title}</h2>
+          <p className="text-slate-300 leading-relaxed">{section.text}</p>
+        </motion.div>
+      ))}
+
+      {/* Charts Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-16"
+      >
+        <h2 className="text-2xl font-semibold text-white mb-4">Visual Findings</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-4">
+            <h3 className="text-white mb-2">Before vs After Productivity</h3>
+          </div>
+          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-4">
+            <h3 className="text-white mb-2">Support Ticket Trends</h3>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Discussion Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold text-white mb-2">4. Discussion</h2>
+        <p className="text-slate-300 leading-relaxed mb-6">
+          The data shows a clear reduction in IT-related issues after we replaced legacy systems and implemented centralized management. The team adapted quickly to the upgraded environment thanks to guided onboarding and support tools.
+        </p>
+        {/* Optional image */}
+        <Image
+          src="/images/client-workstation.jpg"
+          alt="Workstation setup"
+          width={800}
+          height={500}
+          className="rounded-xl border border-slate-800"
+        />
+      </motion.div>
+
+      {/* Conclusion */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold text-white mb-2">5. Conclusion</h2>
+        <p className="text-slate-300 leading-relaxed">
+          This project validates the importance of structured upgrades and modern infrastructure. A strategic approach, rather than ad-hoc fixes, led to long-term gains and smoother operations.
+        </p>
+      </motion.div>
+
+      {/* Recommendations */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-semibold text-white mb-2">6. Recommendations</h2>
+        <ul className="list-disc list-inside text-slate-300 space-y-2">
+          <li>Upgrade to Windows 11 on all eligible machines</li>
+          <li>Implement centralized IT support ticketing</li>
+          <li>Use cloud backups for business continuity</li>
+          <li>Schedule periodic infrastructure audits</li>
+        </ul>
+      </motion.div>
+
+      {/* References */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-16"
+      >
+        <h2 className="text-2xl font-semibold text-white mb-2">7. References</h2>
+        <ul className="list-disc list-inside text-slate-400 text-sm space-y-1">
+          <li>Client X internal IT logs and tickets</li>
+          <li>Productivity analytics (internal KPI dashboard)</li>
+          <li>Windows 11 deployment guide – Microsoft Docs</li>
+        </ul>
+      </motion.div>
+
+      {/* PDF Download CTA */}
+      <div className="text-center">
+        <a
+          href="/downloads/case-study-client-x.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition"
+        >
+          <Download size={18} />
+          Download PDF
+        </a>
+      </div>
+    </section>
+  );
+}

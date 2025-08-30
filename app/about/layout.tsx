@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { Navbar } from "./components/ui/nav";
-import { Footer } from "./components/ui/footer";
 
 export const metadata: Metadata = {
-  title: "TryCaze",
-  description: "Vaše sigurno mjesto za digitalna rješenja",
+  title: "TryCaze - O nama",
+  description: "Saznajte naše najvrjednije kvalitete našega rada",
 };
 
 export default function RootLayout({
@@ -16,9 +13,7 @@ export default function RootLayout({
   return (
     <html lang="hr">
       <body>
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
