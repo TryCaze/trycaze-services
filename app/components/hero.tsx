@@ -96,7 +96,7 @@ export function HeroSection() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/404"
+                href="/izbor-operativnog-sustava"
                 className="flex items-center justify-center gap-2 px-6 py-3 bg-slate-800 text-white font-medium rounded-lg border border-slate-700 hover:bg-slate-700 transition-all"
               >
                 <ImWindows className="w-5 h-5 text-blue-400" />
