@@ -1,10 +1,14 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Clock, Github, Instagram } from 'lucide-react';
+import { Mail, Phone, Clock, Github, Instagram, Trash2 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export function Footer() {
+interface FooterProps {
+  onResetCookies?: () => void;
+}
+
+export function Footer({ onResetCookies }: FooterProps) {
   return (
     <motion.footer 
       initial={{ opacity: 0 }}
@@ -160,16 +164,32 @@ export function Footer() {
           <div className="mb-4 md:mb-0">
             TryCaze © {new Date().getFullYear()}. Sva prava pridržana.
           </div>
-          <div className="flex space-x-6">
-            <Link href="#" className="hover:text-blue-400 transition-colors">
-              Privatnost
-            </Link>
-            <Link href="#" className="hover:text-blue-400 transition-colors">
-              Uvjeti korištenja
-            </Link>
-            <Link href="#" className="hover:text-blue-400 transition-colors">
-              Kolačići
-            </Link>
+          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+            <div className="flex space-x-6">
+              <Link href="#" className="hover:text-blue-400 transition-colors">
+                Privatnost
+              </Link>
+              <Link href="#" className="hover:text-blue-400 transition-colors">
+                Uvjeti korištenja
+              </Link>
+              <Link href="#" className="hover:text-blue-400 transition-colors">
+                Kolačići
+              </Link>
+            </div>
+            
+            {/* Reset Cookies Button */}
+            {onResetCookies && (
+              <motion.button
+                onClick={onResetCookies}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center space-x-1 text-slate-400 hover:text-red-400 transition-colors mt-2 md:mt-0 md:ml-6"
+                title="Resetiraj postavke kolačića"
+              >
+                <Trash2 className="w-4 h-4" />
+                <span>Resetiraj kolačiće</span>
+              </motion.button>
+            )}
           </div>
         </motion.div>
       </div>

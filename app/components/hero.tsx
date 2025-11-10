@@ -45,7 +45,7 @@ export function HeroSection() {
             >
               <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />
               <span className="text-sm font-medium text-blue-400">
-                Windows 10 podrška uskoro završava!
+                Windows 10 podrška je gotova!
               </span>
             </motion.div>
 
@@ -56,7 +56,7 @@ export function HeroSection() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-300">
-                Windows 10 podrška uskoro završava!
+                Podrška za Windows 10 je ugašena!
               </span>
               <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
@@ -70,11 +70,13 @@ export function HeroSection() {
               transition={{ delay: 0.6 }}
               className="text-lg text-slate-300 max-w-lg leading-relaxed"
             >
-              Windows 10 je bio jedan od najpopularnijih operativnih sustava, ali Microsoft je najavio da će podrška za Windows 10 završiti ove godine. To znači da neće biti više sigurnosnih ažuriranja, tehničke podrške ili softverskih poboljšanja.
+              Windows 10 podrška je ugašena od 14.10.2025. i što to znači za vas? Sa ugašenjem podrške za Windows 10 znači da novi verzija operativnog sustava više neće izlaziti koje uključuju sigurnosna ažuriranja.
               <br /><br />
-              Što to znači za vas? Ako još uvijek koristite Windows 10, vrijeme je da razmislite o nadogradnji na Windows 11 ili neki drugi operativni sustav. Nadogradnja će vam omogućiti pristup najnovijim sigurnosnim značajkama, poboljšanjima performansi i novim funkcionalnostima.
+              I što to znači za vas? Da li je potrebno odmah preći na novu verziju? NE! Windows 10 je i dalje upotrebljiv bez obzira što nove verzije neće izači. Jedina važna stvar su sigurnosne značajke
               <br /><br />
-              <span className="text-blue-400 font-medium">Saznajte najbolju opciju za Vas!</span>
+              Da li trebam ažurirati na novi operativni sustav? Ako želite! Možete preći na Windows 11 ako ste u mogućnosti, ili ako želite isprobati i svijet Linuxa! Ali i zapamtite, Windows 10 je i dalje uporebljiv operativan sustav!
+              <br /><br />
+              <span className="text-blue-400 font-medium">Pročitajte više o ovome u našem najnovijem blogu!</span>
             </motion.p>
 
             <motion.div
@@ -86,7 +88,7 @@ export function HeroSection() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/case-studies/projekat-mint"
+                href="blog/izbor-operativnog-sustava-2025"
                 className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all"
               >
                 <ArrowRight className="w-5 h-5" />

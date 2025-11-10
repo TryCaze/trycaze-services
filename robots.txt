@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trycaze-services.vercel.app/sitemap.xml

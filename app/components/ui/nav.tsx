@@ -17,6 +17,7 @@ import {
   X,
   ChevronsLeftRightEllipsisIcon,
   Phone,
+  MessageSquareDot,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -117,6 +118,12 @@ export function Navbar() {
             </AnimatePresence>
           </div>
           <a
+            href="/blog"
+            className="flex items-center hover:bg-gray-700 px-4 py-2 rounded-full transition-colors"
+          >
+            <MessageSquareDot className='mr-2' size={18} />  Blogovi
+          </a>
+          <a
             href="mailto:trycaze@proton.me"
             className="flex items-center hover:bg-gray-700 px-4 py-2 rounded-full transition-colors"
           >
@@ -193,6 +200,14 @@ export function Navbar() {
                 )}
               </AnimatePresence>
             </div>
+
+            <a
+            href="/blog"
+            className="flex py-3 px-4 items-center hover:bg-gray-700 rounded-full transition-colors"
+            onClick={() => setMenuOpen(false)}
+            >
+              <MessageSquareDot className="mr-3" size={18}/> Blog
+            </a>
 
             <a
               href="mailto:trycaze@proton.me" 

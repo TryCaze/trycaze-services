@@ -1,0 +1,191 @@
+import { BlogPost } from '@/types/blog';
+
+export const completeGuideNextjs: BlogPost = {
+    slug: '',
+    title: '',
+    description: '',
+    excerpt: '',
+    date: '',
+    updatedAt: '',
+    author: '',
+    categories: [],
+    tags: [],
+    published: false,
+    featured: false,
+    readingTime: '',
+    coverImage: '',
+    metadata: {
+        title: '',
+        description: '',
+        keywords: [],
+        ogImage: '',
+        canonicalUrl: ''
+    },
+    content: [
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'image',
+            content: '',
+            imageAlt: ''
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'code',
+            content: `// code placeholder`,
+            language: 'typescript'
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'code',
+            content: `// code placeholder`,
+            language: 'typescript'
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'code',
+            content: `// code placeholder`,
+            language: 'typescript'
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'code',
+            content: `// code placeholder`,
+            language: 'typescript'
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'code',
+            content: `// code placeholder`,
+            language: 'typescript'
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'code',
+            content: `// code placeholder`,
+            language: 'typescript'
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'code',
+            content: `// code placeholder`,
+            language: 'typescript'
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'code',
+            content: `// code placeholder`,
+            language: 'typescript'
+        },
+        {
+            type: 'quote',
+            content: ''
+        },
+        {
+            type: 'subtitle',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        },
+        {
+            type: 'paragraph',
+            content: ''
+        }
+    ]
+};
