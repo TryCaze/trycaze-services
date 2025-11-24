@@ -31,7 +31,7 @@ export function Hero() {
 
           {/* Subheading */}
           <p className="mt-6 text-lg text-slate-300 max-w-2xl mx-auto">
-            Od popravka hardvera do razvoja web stranica po narudžbi, donosimo stručna rješenja u vaš digitalni svijet - brza, pouzdana i uvijek personalizirana.
+            Od popravka hardvera do razvoja web stranica po narudžbi, donosimo stručna rješenja u vaš digitalni svijet, brza, pouzdana i uvijek personalizirana.
           </p>
 
           {/* Services pills */}
@@ -41,7 +41,7 @@ export function Hero() {
               'IT podrška',
               'Popravci',
               'Postavljanje',
-              'Umrežavanje',
+              '3D Printanje',
               'Web razvoj',
             ].map((service, i) => (
               <span
@@ -51,17 +51,6 @@ export function Hero() {
                 {service}
               </span>
             ))}
-          </div>
-
-          {/* CTA */}
-          <div className="mt-10">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-base font-medium px-6 py-3 rounded-full shadow-lg hover:shadow-blue-600/30 transition"
-            >
-              Započnite danas! <ArrowRight size={18} />
-            </motion.a>
           </div>
         </motion.div>
       </div>

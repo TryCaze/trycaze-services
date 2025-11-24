@@ -3,7 +3,7 @@ import { BlogPost } from '@/types/blog';
 export const izborOperativnogSustava: BlogPost = {
     slug: 'izbor-operativnog-sustava-2025',
     title: 'Što nakon Windows 10? Vodič za izbor novog operativnog sustava u 2025.',
-    description: 'Microsoft je ugasio podršku za Windows 10. Saznajte što to znači za korisnike i koje su najbolje alternative – Windows 11, Linux ili MacOs. Usporedili smo prednosti, mane i prijelazne korake.',
+    description: 'Microsoft je ugasio podršku za Windows 10. Saznajte što to znači za korisnike i koje su najbolje alternative, Windows 11, Linux ili MacOs. Usporedili smo prednosti, mane i prijelazne korake.',
     date: '2025-11-09',
     author: 'Kristijan Vukušić',
     categories: ['it', 'vijesti'],

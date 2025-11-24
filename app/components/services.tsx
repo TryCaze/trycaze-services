@@ -6,7 +6,8 @@ import {
   Settings, 
   Network, 
   Code,
-  ArrowRight
+  ArrowRight,
+  PrinterCheck
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -223,20 +224,20 @@ export function Services() {
             <div className="relative h-full bg-slate-900 rounded-[11px] p-6 flex flex-col">
               <div className="flex justify-between items-start mb-4">
                 <div className="pr-4">
-                  <h3 className="text-xl font-bold text-white">Umrežavanje</h3>
-                  <p className="mt-1 text-sm text-blue-400">Umrežavanje i infrastruktura</p>
+                  <h3 className="text-xl font-bold text-white">3D Printanje</h3>
+                  <p className="mt-1 text-sm text-blue-400">Komisije za 3D printanje</p>
                 </div>
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/10 to-indigo-500/10 flex items-center justify-center flex-shrink-0">
-                  <Network className="w-5 h-5 text-blue-400" />
+                  <PrinterCheck className="w-5 h-5 text-blue-400" />
                 </div>
               </div>
-              <p className="text-slate-300 flex-grow mb-4">Postavljanje i održavanje mrežne infrastrukture</p>
-              <motion.div 
+              <p className="text-slate-300 flex-grow mb-4">Izrada 3D modela i printanje u fizičke objekte</p>
+              <motion.div
                 className="pt-4 mt-auto border-t border-slate-800"
                 whileHover={{ borderColor: "rgba(99, 102, 241, 0.5)" }}
               >
                 <motion.a
-                  href="/services/networking"
+                  href="/services/3dprinting"
                   className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
                   whileHover={{ x: 5 }}
                 >

@@ -11,15 +11,15 @@ import {
   ArrowRight,
   BookOpenCheck,
   Users,
-  GraduationCap,
   Cpu,
-  MonitorUp
+  MonitorUp,
+  PrinterCheck
 } from 'lucide-react';
 
 const serviceIcons = {
   'performance': BookOpenCheck,
   'support': Users,
-  'training': GraduationCap,
+  '3dprinting': PrinterCheck,
   'web-development': Code,
   'networking': Network,
   'repair': Cpu,
@@ -48,10 +48,10 @@ export function ServicesSection() {
       description: 'Osiguravanje svakodnevne tehničke podrške krajnjim korisnicima kroz pomoć pri rješavanju softverskih i hardverskih problema, savjetovanje i vođenje korisnika u radu s digitalnim alatima i tehnologijama.'
     },
     {
-      id: 'training',
-      title: 'Obuka',
-      subtitle: 'Obuka za korisnike',
-      description: 'Organizacija i provedba edukacija za korisnike s ciljem boljeg razumijevanja i efikasnijeg korištenja sustava i aplikacija. Fokus je na osnaživanju korisnika kroz praktična znanja i konkretne vještine.'
+      id: '3dprinting',
+      title: '3D Printanje',
+      subtitle: 'Komisije za 3D printanje',
+      description: 'Izrada 3D modela i njihovo pretvaranje u fizičke objekte putem 3D printanja. Usluge uključuju dizajn, pripremu modela za ispis te sam proces printanja koristeći različite materijale i tehnologije.'
     },
     {
       id: 'web-development',

@@ -2,10 +2,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
-import { ArrowRight, Briefcase, Globe, Server, Wrench } from "lucide-react";
-import { FaMicrosoft, FaGoogleDrive, FaDiscord, FaCloudsmith, FaApple, FaLinux } from "react-icons/fa";
+import { ArrowRight, Briefcase, Globe, PrinterCheck, Server, Wrench } from "lucide-react";
+import { FaMicrosoft, FaGoogleDrive, FaDiscord, FaCloudsmith, FaApple, FaLinux, FaBlender } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
-import { SiMinutemailer, SiAnydesk, SiHostinger, SiShopify, SiReact } from "react-icons/si";
+import { SiMinutemailer, SiAnydesk, SiHostinger, SiShopify, SiReact, SiCreality } from "react-icons/si";
+import { BsWordpress } from "react-icons/bs";
 
 const serviceTechnologies = [
   {
@@ -84,27 +85,27 @@ const serviceTechnologies = [
     ]
   },
   {
-    id: 'networking',
-    icon: Server,
-    name: 'Umrežavanje',
+    id: '3dprinting',
+    icon: PrinterCheck,
+    name: '3D Printanje',
     tools: [
       { 
-        name: 'Cisco', 
-        icon: Briefcase,
-        shortDescription: 'Mrežna oprema',
-        longDescription: 'Mrežna oprema poslovne klase uključujući rutere, preklopnike i sigurnosne uređaje za pouzdanu poslovnu povezanost.' 
+        name: 'Cura Slicer', 
+        icon: PrinterCheck,
+        shortDescription: 'Cura softver za rezanje',
+        longDescription: 'Cura je popularni softver za rezanje 3D modela koji omogućuje korisnicima da pripreme svoje modele za 3D ispis s različitim postavkama i opcijama prilagodbe.' 
       },
       { 
-        name: 'Fortinet', 
-        icon: Briefcase,
-        shortDescription: 'Mrežna sigurnost',
-        longDescription: 'Napredni firewall i sigurnosni proizvodi za mreže koji pružaju zaštitu od prijetnji za organizacije.' 
+        name: 'Blender', 
+        icon: FaBlender,
+        shortDescription: '3D modeliranje',
+        longDescription: 'Blender je alat za precizno 3D modeliranje koji se koristi za izradu i uređivanje 3D modela prije ispisa. Nudi širok spektar značajki za dizajn.' 
       },
       { 
-        name: 'Ubiquiti', 
-        icon: Briefcase,
-        shortDescription: 'Bežična oprema',
-        longDescription: 'Visokoučinkovita bežična mrežna oprema s poslovnim značajkama i jednostavnim upravljanjem.' 
+        name: 'Creality Printer', 
+        icon: SiCreality,
+        shortDescription: '3D printer',
+        longDescription: 'Koristimo Creality 3D printere za visokokvalitetno 3D printanje s preciznošću i pouzdanošću, idealne za prototipove i gotove proizvode.' 
       }
     ]
   },
@@ -120,10 +121,10 @@ const serviceTechnologies = [
         longDescription: 'Povoljan web hosting s brzim performansama, jednostavnim alatom za izradu web stranica i 24/7 podrškom za male i srednje tvrtke.' 
       },
       { 
-        name: 'Shopify', 
-        icon: SiShopify,
+        name: 'WordPress', 
+        icon: BsWordpress,
         shortDescription: 'E-commerce sustav',
-        longDescription: 'Vodeća e-commerce platforma koja omogućuje izradu online trgovina s naprednim upravljanjem zalihama i obradom plaćanja.' 
+        longDescription: 'WordPress je popularan sustav za upravljanje sadržajem (CMS) koji omogućuje jednostavno stvaranje i upravljanje web stranicama i e-trgovinama.' 
       },
       { 
         name: 'React', 

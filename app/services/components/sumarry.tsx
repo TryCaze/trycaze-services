@@ -1,13 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Wrench, Globe, Server, Network, Laptop2, Settings } from 'lucide-react';
+import { Wrench, Globe, Server, Network, Laptop2, Settings, PrinterCheck } from 'lucide-react';
 
 const services = [
   { name: 'Poslovne usluge', icon: <Globe className="w-6 h-6 text-blue-400" /> },
   { name: 'IT podrška', icon: <Laptop2 className="w-6 h-6 text-blue-400" /> },
   { name: 'Popravci', icon: <Wrench className="w-6 h-6 text-blue-400" /> },
   { name: 'Postavljanje', icon: <Settings className="w-6 h-6 text-blue-400" /> },
-  { name: 'Umrežavanje', icon: <Network className="w-6 h-6 text-blue-400" /> },
+  { name: '3D Printanje', icon: <PrinterCheck className="w-6 h-6 text-blue-400" /> },
   { name: 'Web razvoj', icon: <Server className="w-6 h-6 text-blue-400" /> },
 ];
 

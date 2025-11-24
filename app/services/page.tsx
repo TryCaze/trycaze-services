@@ -9,7 +9,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "IT podrška, popravci, web razvoj",
-  description: "Otkrijte profesionalne IT usluge na jednom mjestu — poslovna rješenja, tehnička podrška, popravci računala, postavljanje i umrežavanje sustava te web razvoj po mjeri. TryCaze Services vam omogućuje brza, sigurna i moderna rješenja.",
+  description: "Otkrijte profesionalne IT usluge na jednom mjestu, poslovna rješenja, tehnička podrška, popravci računala, postavljanje, umrežavanje sustava i 3D printanje te web razvoj po mjeri. TryCaze Services vam omogućuje brza, sigurna i moderna rješenja.",
    keywords: [
     "IT usluge",
     "poslovne usluge",
@@ -20,12 +20,13 @@ export const metadata: Metadata = {
     "web razvoj",
     "servis računala",
     "održavanje IT sustava",
-    "TryCaze Services"
+    "TryCaze Services",
+    "3d printanje"
   ],
   openGraph: {
     title: "TryCaze IT Usluge, Poslovna rješenja, podrška, web razvoj",
     description:
-      "Sveobuhvatne IT usluge — od poslovne podrške i popravaka do umrežavanja i web razvoja. Profesionalno, brzo i pouzdano.",
+      "Sveobuhvatne IT usluge, od poslovne podrške i popravaka do umrežavanja i web razvoja. Profesionalno, brzo i pouzdano.",
     url: "https://trycaze-services.vercel.app/services",
     siteName: "TryCaze Services",
     type: "website",

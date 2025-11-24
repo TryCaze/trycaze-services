@@ -9,7 +9,6 @@ import {
   Briefcase,
   Wrench,
   Laptop,
-  Server,
   Globe,
   PenTool,
   Info,
@@ -18,6 +17,7 @@ import {
   ChevronsLeftRightEllipsisIcon,
   Phone,
   MessageSquareDot,
+  PrinterCheck,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -34,7 +34,7 @@ export function Navbar() {
     { label: 'IT Podrška', icon: PenTool, path: '/services/support' },
     { label: 'Popravci', icon: Wrench, path: '/services/repairs' },
     { label: 'Postavljanje', icon: Laptop, path: '/services/setup' },
-    { label: 'Umrežavanje', icon: Server, path: '/services/networking' },
+    { label: '3D Printanje', icon: PrinterCheck, path: '/services/3dprinting' },
     { label: 'Web Razvoj', icon: Globe, path: '/services/web' },
   ];
 

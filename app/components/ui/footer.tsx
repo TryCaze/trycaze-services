@@ -110,8 +110,8 @@ export function Footer({ onResetCookies }: FooterProps) {
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/services/networking" className="text-slate-400 hover:text-blue-400 transition-colors">
-                  Umrežavanje
+                <Link href="/services/3dprinting" className="text-slate-400 hover:text-blue-400 transition-colors">
+                  3D Printanje
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>

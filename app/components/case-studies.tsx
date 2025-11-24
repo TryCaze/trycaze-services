@@ -15,7 +15,7 @@ export function CaseStudies() {
     {
       id: 1,
       title: 'Projekat MINT',
-      description: 'Vračanje funkcionalnosti starog računala sa Linuxom u kolabiraciji sa FTRR-om',
+      description: 'Vračanje funkcionalnosti starog računala sa Linuxom.',
       icon: DiLinux,
       category: 'Postavljanje'
     },

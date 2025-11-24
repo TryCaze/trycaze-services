@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Globe, Laptop2, Wrench, Settings, Network, Server, ChevronDown } from 'lucide-react';
+import { Globe, Laptop2, Wrench, Settings, Network, Server, ChevronDown, PrinterCheck } from 'lucide-react';
 
 const services = [
   {
@@ -37,12 +37,12 @@ const services = [
     pointThree: 'Konfiguracija operativnih sustava, korisničkih računa i sigurnosnih postavki.',
   },
   {
-    title: 'Umrežavanje',
-    icon: <Network className="w-5 h-5 text-blue-400" />,
-    description: 'Planiranje, implementacija i održavanje mrežnih sustava za kućne i poslovne korisnike. Nudimo pouzdane i sigurne žične i bežične mreže, s naprednim opcijama zaštite i dijagnostike.',
-    pointOne: 'Postavljanje žične infrastrukture i organizacija mrežnog kabliranja.',
-    pointTwo: 'Optimizacija Wi-Fi mreže za brzi i stabilni signal u svim prostorijama.',
-    pointThree: 'Otkrivanje i otklanjanje mrežnih problema te postavljanje sigurnosnih slojeva (VLAN, firewall, gosti pristup).',
+    title: '3D Printanje',
+    icon: <PrinterCheck className="w-5 h-5 text-blue-400" />,
+    description: 'Nudimo usluge 3D printanja za različite potrebe, od prototipiranja do finalnih proizvoda. Koristimo Creality 3D printere koji omogućuju precizne i kvalitetne ispise u različitim materijalima.',
+    pointOne: 'Izrada 3D modela prema specifikacijama klijenta ili iz postojećih dizajna.',
+    pointTwo: 'Odabir pravih materijala za 3D ispis, uključujući PLA, ABS i PETG.',
+    pointThree: 'Postavljanje i konfiguracija 3D printera za optimalne rezultate ispisa.',
   },
   {
     title: 'Web razvoj',
