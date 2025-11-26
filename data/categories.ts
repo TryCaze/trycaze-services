@@ -8,6 +8,7 @@ export const categories = {
     'vijesti': 'Vijesti',
     'tutorial': 'Tutorial',
     'recikliranje': 'Recikliranje',
+    '3d-printanje': '3D Printanje',
 } as const;
 
 export type Category = keyof typeof categories;
