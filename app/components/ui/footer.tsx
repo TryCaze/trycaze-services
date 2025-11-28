@@ -57,7 +57,7 @@ export function Footer({ onResetCookies }: FooterProps) {
             </h3>
             <ul className="space-y-3">
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/services" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge" className="text-slate-400 hover:text-blue-400 transition-colors">
                   Usluge
                 </Link>
               </motion.li>
@@ -67,7 +67,7 @@ export function Footer({ onResetCookies }: FooterProps) {
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/about" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/o-nama" className="text-slate-400 hover:text-blue-400 transition-colors">
                   O nama
                 </Link>
               </motion.li>
@@ -90,32 +90,32 @@ export function Footer({ onResetCookies }: FooterProps) {
             </h3>
             <ul className="space-y-3">
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/services/business" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/poslovne" className="text-slate-400 hover:text-blue-400 transition-colors">
                   Poslovne usluge
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/services/support" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/it-podrska" className="text-slate-400 hover:text-blue-400 transition-colors">
                   IT podrška
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/services/repairs" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/popravci" className="text-slate-400 hover:text-blue-400 transition-colors">
                   Popravci
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/services/setup" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/sastavljanje-racunala" className="text-slate-400 hover:text-blue-400 transition-colors">
                   Postavljanje
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/services/3dprinting" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/3dprintanje" className="text-slate-400 hover:text-blue-400 transition-colors">
                   3D Printanje
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/services/web" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/izrada-web-stranica" className="text-slate-400 hover:text-blue-400 transition-colors">
                   Web razvoj
                 </Link>
               </motion.li>

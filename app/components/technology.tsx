@@ -7,6 +7,7 @@ import { FaMicrosoft, FaGoogleDrive, FaDiscord, FaCloudsmith, FaApple, FaLinux, 
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { SiMinutemailer, SiAnydesk, SiHostinger, SiShopify, SiReact, SiCreality } from "react-icons/si";
 import { BsWordpress } from "react-icons/bs";
+import Link from "next/link";
 
 const serviceTechnologies = [
   {
@@ -18,19 +19,22 @@ const serviceTechnologies = [
         name: 'Microsoft 365', 
         icon: FaMicrosoft,
         shortDescription: 'Uredski paket',
-        longDescription: 'Microsoft 365 je paket aplikacija za produktivnost i poslovnu suradnju, uključujući Word, Excel, PowerPoint, Outlook, Access i Teams.' 
+        longDescription: 'Microsoft 365 je paket aplikacija za produktivnost i poslovnu suradnju, uključujući Word, Excel, PowerPoint, Outlook, Access i Teams.',
+        link: 'https://m365.cloud.microsoft', 
       },
       { 
         name: 'Google Workspace', 
         icon: FaGoogleDrive,
         shortDescription: 'Alati za suradnju u oblaku',
-        longDescription: 'Google Workspace je skup alata u oblaku poput Gmaila, Dokumenata, Drivea i Meeta za produktivnost i suradnju.' 
+        longDescription: 'Google Workspace je skup alata u oblaku poput Gmaila, Dokumenata, Drivea i Meeta za produktivnost i suradnju.',
+        link: 'https://workspace.google.com/products/drive/', 
       },
       { 
         name: 'Discord', 
         icon: FaDiscord,
         shortDescription: 'Platforma za komunikaciju',
-        longDescription: 'Discord je platforma za komunikaciju idealna za timsku suradnju, nudi glasovnu, video i tekstualnu komunikaciju.' 
+        longDescription: 'Discord je platforma za komunikaciju idealna za timsku suradnju, nudi glasovnu, video i tekstualnu komunikaciju.',
+        link: 'https://discord.com/', 
       }
     ]
   },
@@ -43,19 +47,22 @@ const serviceTechnologies = [
         name: 'Korisnička podrška', 
         icon: RiCustomerService2Fill,
         shortDescription: 'Hitna telefonska podrška',
-        longDescription: 'Hitna telefonska podrška za trenutnu pomoć kod IT problema, osigurava brzo rješavanje i minimalan zastoj.' 
+        longDescription: 'Hitna telefonska podrška za trenutnu pomoć kod IT problema, osigurava brzo rješavanje i minimalan zastoj.',
+        link: '/usluge/it-podrska',  
       },
       { 
         name: 'AnyDesk', 
         icon: SiAnydesk,
         shortDescription: 'Alat za udaljenu radnu površinu',
-        longDescription: 'Lagana aplikacija za udaljenu radnu površinu koja omogućuje brze veze s niskom latencijom za IT podršku i rad na daljinu.' 
+        longDescription: 'Lagana aplikacija za udaljenu radnu površinu koja omogućuje brze veze s niskom latencijom za IT podršku i rad na daljinu.',
+        link: 'https://anydesk.com/hr',  
       },
       { 
         name: 'Podrška putem e-pošte', 
         icon: SiMinutemailer,
         shortDescription: 'Podrška putem e-pošte',
-        longDescription: 'Podrška putem e-pošte za nehitne IT upite i pomoć.' 
+        longDescription: 'Podrška putem e-pošte za nehitne IT upite i pomoć.',
+        link: '/usluge/it-podrska',  
       }
     ]
   },
@@ -68,19 +75,22 @@ const serviceTechnologies = [
         name: 'Windows OS', 
         icon: FaMicrosoft,
         shortDescription: 'Dijagnostika za Windows',
-        longDescription: 'Kompletan set alata za dijagnostiku i popravak Windows operativnih sustava uključujući vraćanje sustava, čišćenje diska i nadzor performansi.' 
+        longDescription: 'Kompletan set alata za dijagnostiku i popravak Windows operativnih sustava uključujući vraćanje sustava, čišćenje diska i nadzor performansi.',
+        link: '/usluge/popravci',  
       },
       { 
         name: 'Linux alati', 
         icon: FaLinux,
         shortDescription: 'Linux alati za popravak',
-        longDescription: 'Snažni open-source alati za oporavak sustava, dijagnostiku hardvera i optimizaciju performansi na Linux distribucijama.' 
+        longDescription: 'Snažni open-source alati za oporavak sustava, dijagnostiku hardvera i optimizaciju performansi na Linux distribucijama.',
+        link: '/usluge/popravci',  
       },
       { 
         name: 'macOS Recovery', 
         icon: FaApple,
         shortDescription: 'Mac sustav za oporavak',
-        longDescription: 'Appleov ugrađeni sustav za oporavak s hardverskim testovima, alatom za disk i mogućnostima ponovne instalacije macOS-a za rješavanje problema.' 
+        longDescription: 'Appleov ugrađeni sustav za oporavak s hardverskim testovima, alatom za disk i mogućnostima ponovne instalacije macOS-a za rješavanje problema.',
+        link: '/usluge/popravci',  
       }
     ]
   },
@@ -93,19 +103,22 @@ const serviceTechnologies = [
         name: 'Cura Slicer', 
         icon: PrinterCheck,
         shortDescription: 'Cura softver za rezanje',
-        longDescription: 'Cura je popularni softver za rezanje 3D modela koji omogućuje korisnicima da pripreme svoje modele za 3D ispis s različitim postavkama i opcijama prilagodbe.' 
+        longDescription: 'Cura je popularni softver za rezanje 3D modela koji omogućuje korisnicima da pripreme svoje modele za 3D ispis.',
+        link: 'https://ultimaker.com/software/ultimaker-cura/',  
       },
       { 
         name: 'Blender', 
         icon: FaBlender,
         shortDescription: '3D modeliranje',
-        longDescription: 'Blender je alat za precizno 3D modeliranje koji se koristi za izradu i uređivanje 3D modela prije ispisa. Nudi širok spektar značajki za dizajn.' 
+        longDescription: 'Blender je alat za precizno 3D modeliranje koji se koristi za izradu i uređivanje 3D modela prije ispisa. Nudi širok spektar značajki za dizajn.',
+        link: 'https://www.blender.org/',  
       },
       { 
         name: 'Creality Printer', 
         icon: SiCreality,
         shortDescription: '3D printer',
-        longDescription: 'Koristimo Creality 3D printere za visokokvalitetno 3D printanje s preciznošću i pouzdanošću, idealne za prototipove i gotove proizvode.' 
+        longDescription: 'Koristimo Creality 3D printere za visokokvalitetno 3D printanje s preciznošću i pouzdanošću, idealne za prototipove i gotove proizvode.',
+        link: 'https://www.creality.com/',  
       }
     ]
   },
@@ -118,19 +131,22 @@ const serviceTechnologies = [
         name: 'Hostinger', 
         icon: SiHostinger,
         shortDescription: 'Platforma za web hosting',
-        longDescription: 'Povoljan web hosting s brzim performansama, jednostavnim alatom za izradu web stranica i 24/7 podrškom za male i srednje tvrtke.' 
+        longDescription: 'Povoljan web hosting s brzim performansama, jednostavnim alatom za izradu web stranica i 24/7 podrškom za male i srednje tvrtke.',
+        link: 'https://www.hostinger.com/',  
       },
       { 
         name: 'WordPress', 
         icon: BsWordpress,
         shortDescription: 'E-commerce sustav',
-        longDescription: 'WordPress je popularan sustav za upravljanje sadržajem (CMS) koji omogućuje jednostavno stvaranje i upravljanje web stranicama i e-trgovinama.' 
+        longDescription: 'WordPress je popularan sustav za upravljanje sadržajem (CMS) koji omogućuje jednostavno stvaranje i upravljanje web stranicama i e-trgovinama.',
+        link: 'https://wordpress.com/',  
       },
       { 
         name: 'React', 
         icon: SiReact,
         shortDescription: 'Frontend biblioteka',
-        longDescription: 'JavaScript biblioteka za izradu interaktivnih korisničkih sučelja s višekratnim komponentama, koju održava Facebook i velika zajednica programera.' 
+        longDescription: 'JavaScript biblioteka za izradu interaktivnih korisničkih sučelja s višekratnim komponentama, koju održava Facebook i velika zajednica programera.',
+        link: 'https://react.dev/',  
       }
     ]
   }
@@ -237,12 +253,12 @@ export function TechnologyShowcase() {
                                   {tool.longDescription}
                                 </p>
                               </div>
-                              <a 
-                                href="#" 
+                              <Link 
+                                href={tool.link}
                                 className="mt-4 inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
                               >
                                 Web stranica <ArrowRight className="ml-1 w-4 h-4" /> 
-                              </a>
+                              </Link>
                             </div>
                           </div>
                         </motion.div>

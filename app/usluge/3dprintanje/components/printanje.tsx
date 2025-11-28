@@ -14,7 +14,7 @@ import {
   Zap,
   Heart,
 } from "lucide-react";
-import CommissionsHero from "./components/hero";
+import CommissionsHero from "./hero";
 import Link from "next/link";
 import Image from "next/image";
 

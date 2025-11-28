@@ -7,14 +7,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Statične stranice
   const staticPages: MetadataRoute.Sitemap = [
     '',
-    '/about',
-    '/services',
-    '/business',
-    '/support',
-    '/repairs',
-    '/setup',
-    '/networking',
-    '/web',
+    '/o-nama',
+    '/usluge',
+    '/poslovne',
+    '/it-podrska',
+    '/popravci',
+    '/sastavljanje-racunala',
+    '/3dprintanje',
+    '/izrada-web-stranica',
     '/blog',
   ].map((path) => ({
     url: `${baseUrl}${path}`,

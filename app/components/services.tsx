@@ -93,7 +93,7 @@ export function Services() {
                 whileHover={{ borderColor: "rgba(99, 102, 241, 0.5)" }}
               >
                 <motion.a
-                  href="/services/business"
+                  href="/usluge/poslovne"
                   className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
                   whileHover={{ x: 5 }}
                 >
@@ -129,7 +129,7 @@ export function Services() {
                 whileHover={{ borderColor: "rgba(99, 102, 241, 0.5)" }}
               >
                 <motion.a
-                  href="/services/support"
+                  href="/usluge/it-podrska"
                   className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
                   whileHover={{ x: 5 }}
                 >
@@ -165,7 +165,7 @@ export function Services() {
                 whileHover={{ borderColor: "rgba(99, 102, 241, 0.5)" }}
               >
                 <motion.a
-                  href="/services/repairs"
+                  href="/usluge/popravci"
                   className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
                   whileHover={{ x: 5 }}
                 >
@@ -201,7 +201,7 @@ export function Services() {
                 whileHover={{ borderColor: "rgba(99, 102, 241, 0.5)" }}
               >
                 <motion.a
-                  href="/services/setup"
+                  href="/usluge/sastavljanje-racunala"
                   className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
                   whileHover={{ x: 5 }}
                 >
@@ -237,7 +237,7 @@ export function Services() {
                 whileHover={{ borderColor: "rgba(99, 102, 241, 0.5)" }}
               >
                 <motion.a
-                  href="/services/3dprinting"
+                  href="/usluge/3dprintanje"
                   className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
                   whileHover={{ x: 5 }}
                 >
@@ -273,7 +273,7 @@ export function Services() {
                 whileHover={{ borderColor: "rgba(99, 102, 241, 0.5)" }}
               >
                 <motion.a
-                  href="/services/web"
+                  href="/usluge/izrada-web-stranica"
                   className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
                   whileHover={{ x: 5 }}
                 >

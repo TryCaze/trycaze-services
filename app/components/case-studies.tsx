@@ -99,7 +99,7 @@ export function CaseStudies() {
                   }}
                 >
                   <motion.a
-                    href="/case-studies/projekat-mint"
+                    href="/studiji-slucaja/projekat-mint"
                     className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
                     whileHover={{ x: 5 }}
                   >

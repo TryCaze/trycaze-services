@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 
-export default function AboutPage() {
+export default function ONama() {
 
   return (
     <div className="overflow-hidden">

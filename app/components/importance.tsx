@@ -177,7 +177,7 @@ export function ServicesSection() {
                     }}
                   >
                     <motion.a
-                      href="/services"
+                      href="/usluge"
                       className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
                       whileHover={{ x: 5 }}
                     >

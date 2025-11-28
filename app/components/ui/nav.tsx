@@ -30,12 +30,12 @@ type Service = {
 export function Navbar() {
 
   const services: Service[] = [
-    { label: 'Poslovne usluge', icon: Briefcase, path: '/services/business' },
-    { label: 'IT Podrška', icon: PenTool, path: '/services/support' },
-    { label: 'Popravci', icon: Wrench, path: '/services/repairs' },
-    { label: 'Postavljanje', icon: Laptop, path: '/services/setup' },
-    { label: '3D Printanje', icon: PrinterCheck, path: '/services/3dprinting' },
-    { label: 'Web Razvoj', icon: Globe, path: '/services/web' },
+    { label: 'Poslovne usluge', icon: Briefcase, path: '/usluge/poslovne' },
+    { label: 'IT Podrška', icon: PenTool, path: '/usluge/it-podrska' },
+    { label: 'Popravci', icon: Wrench, path: '/usluge/popravci' },
+    { label: 'Postavljanje', icon: Laptop, path: '/usluge/sastavljanje-racunala' },
+    { label: '3D Printanje', icon: PrinterCheck, path: '/usluge/3dprintanje' },
+    { label: 'Web Razvoj', icon: Globe, path: '/usluge/izrada-web-stranica' },
   ];
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -78,7 +78,7 @@ export function Navbar() {
             <Home className="mr-2" size={18} /> Početna
           </Link>
           <Link 
-            href={`/about`} 
+            href={`/o-nama`} 
             className="flex items-center hover:bg-gray-700 px-4 py-2 rounded-full transition-colors"
           >
             <Info className="mr-2" size={18} /> O nama
