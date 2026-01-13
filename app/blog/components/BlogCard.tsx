@@ -23,12 +23,13 @@ export default function BlogCard({ post }: BlogCardProps) {
       <div className="p-6">
         <div className="flex flex-wrap gap-2 mb-3">
           {post.categories.slice(0, 2).map(category => (
-            <span
+            <Link
+              href={`/category/${category}`}
               key={category}
               className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded"
             >
               {categories[category as keyof typeof categories] || category}
-            </span>
+            </Link>
           ))}
           {post.featured && (
             <span className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded">

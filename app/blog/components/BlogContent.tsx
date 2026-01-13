@@ -37,6 +37,20 @@ export default function BlogContent({ content }: BlogContentProps) {
                 {section.content}
               </h3>
             )
+
+            case 'list':
+              return(
+                <div>
+                <p className="mb-6 leading-relaxed text-gray-100">{section.content}</p>
+                <ul key={index} className="list-disc list-inside mb-6">
+                  {section.items?.map((item, itemIndex) => (
+                    <li key={itemIndex} className="mb-2">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                </div>
+              )
           
           case 'paragraph':
             return (
@@ -82,6 +96,13 @@ export default function BlogContent({ content }: BlogContentProps) {
               <blockquote key={index} className="border-l-4 border-blue-500 pl-6 py-2 my-6 italic text-gray-600 bg-blue-50 rounded-r-lg">
                 "{section.content}"
               </blockquote>
+            );
+
+            case 'link':
+            return (
+              <a key={index} href={section.content} className="text-blue-500 underline">
+                {section.content}
+              </a>
             );
           
           default:

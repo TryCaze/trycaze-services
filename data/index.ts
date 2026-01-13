@@ -3,11 +3,13 @@ import { categories } from './categories';
 import { uporabaStarihRacunala } from './uporabaStarihRacunala';
 import { izborOperativnogSustava } from './blogs/izborOperativnogSustava';
 import { zapocetisa3DPrintanjem } from './blogs/zapocetisa3DPrintanjem';
+import { acctos } from './blogs/acctos';
 
 export const allBlogPosts: BlogPost[] = [
   uporabaStarihRacunala,
   izborOperativnogSustava,
   zapocetisa3DPrintanjem,
+  acctos,
 ].filter(post => post.published);
 
 export function getBlogPost(slug: string): BlogPost | undefined {

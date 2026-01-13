@@ -9,7 +9,7 @@ export const izborOperativnogSustava: BlogPost = {
     categories: ['it', 'vijesti'],
     tags: ['windows10', 'windows11', 'linux', 'operativni sustav'],
     published: true,
-    featured: true,
+    featured: false,
     readingTime: '10 minuta',
     coverImage: 'https://images.pexels.com/photos/265631/pexels-photo-265631.jpeg',
     metadata: {

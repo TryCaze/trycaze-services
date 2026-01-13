@@ -23,8 +23,9 @@ export interface BlogPost {
 }
 
 export interface BlogSection {
-    type: 'subtitle' | 'H1' | 'H2' | 'H3' | 'list' | 'paragraph' | 'image' | 'code' | 'quote';
+    type: 'subtitle' | 'H1' | 'H2' | 'H3' | 'list' | 'paragraph' | 'image' | 'code' | 'quote' | 'link';
     content: string;
     imageAlt?: string;
     language?: string; // for code blocks, not an actual language, idiot
+    items?: string[]; // for list type
 }

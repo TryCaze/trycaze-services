@@ -166,13 +166,10 @@ export function Footer({ onResetCookies }: FooterProps) {
           </div>
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
             <div className="flex space-x-6">
-              <Link href="#" className="hover:text-blue-400 transition-colors">
+              <Link href="/privatnost" className="hover:text-blue-400 transition-colors">
                 Privatnost
               </Link>
-              <Link href="#" className="hover:text-blue-400 transition-colors">
-                Uvjeti korištenja
-              </Link>
-              <Link href="#" className="hover:text-blue-400 transition-colors">
+              <Link href="/privatnost" className="hover:text-blue-400 transition-colors">
                 Kolačići
               </Link>
             </div>
