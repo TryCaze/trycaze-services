@@ -4,6 +4,7 @@ import { Navbar } from "./components/ui/nav";
 import { Footer } from "./components/ui/footer";
 import { useEffect, useState } from "react";
 import Script from "next/script";
+import ScrollToTop from "./components/ui/scrollToTop";
 
 export default function RootLayout({
   children,
@@ -88,6 +89,7 @@ export default function RootLayout({
   return (
     <html lang="hr">
       <body className="flex flex-col min-h-screen">
+        <ScrollToTop />
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer onResetCookies={handleResetCookies} />
