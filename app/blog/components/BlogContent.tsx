@@ -12,49 +12,49 @@ export default function BlogContent({ content }: BlogContentProps) {
         switch (section.type) {
           case 'subtitle':
             return (
-              <h2 key={index} className="text-2xl font-semibold mt-12 mb-6 first:mt-0">
+              <h2 key={index} className="text-2xl font-semibold mt-12 mb-6 first:mt-0 text-white">
                 {section.content}
               </h2>
             );
 
           case 'H1':
             return (
-              <h1 key={index} className='mt-12 mb-6 first:mt-0 text-4xl font-bold'>
+              <h1 key={index} className='mt-12 mb-6 first:mt-0 text-4xl font-bold text-white'>
                 {section.content}
               </h1>
             )
 
           case 'H2':
             return (
-              <h2 key={index} className="mt-12 mb-4 first:mt-0 text-3xl font-bold">
+              <h2 key={index} className="mt-12 mb-4 first:mt-0 text-3xl font-bold text-white">
                 {section.content}
               </h2>
             )
 
           case 'H3':
             return (
-              <h3 key={index} className="mt-2 mb-2 first:mt-0 text-xl font-bold">
+              <h3 key={index} className="mt-2 mb-2 first:mt-0 text-xl font-bold text-white">
                 {section.content}
               </h3>
             )
 
-            case 'list':
-              return(
-                <div>
-                <p className="mb-6 leading-relaxed text-gray-100">{section.content}</p>
-                <ul key={index} className="list-disc list-inside mb-6">
+          case 'list':
+            return(
+              <div>
+                <p className="mb-6 leading-relaxed text-white">{section.content}</p>
+                <ul key={index} className="list-disc list-inside mb-6 text-white">
                   {section.items?.map((item, itemIndex) => (
                     <li key={itemIndex} className="mb-2">
                       {item}
                     </li>
                   ))}
                 </ul>
-                </div>
-              )
+              </div>
+            )
           
           case 'paragraph':
             return (
-              <p key={index} className="mb-6 leading-relaxed text-gray-100">
+              <p key={index} className="mb-6 leading-relaxed text-white">
                 {section.content}
               </p>
             );
@@ -62,7 +62,7 @@ export default function BlogContent({ content }: BlogContentProps) {
           case 'image':
             return (
               <div key={index} className="my-8">
-                <div className="relative w-full h-64 md:h-96 bg-gray-100 rounded-lg overflow-hidden">
+                <div className="relative w-full h-64 md:h-96 bg-light-blue rounded-lg overflow-hidden">
                   <Image
                     src={section.content}
                     alt={section.imageAlt || 'Blog image'}
@@ -82,10 +82,10 @@ export default function BlogContent({ content }: BlogContentProps) {
           case 'code':
             return (
               <div key={index} className="my-6">
-                <div className="bg-gray-800 text-gray-200 px-4 py-2 text-sm rounded-t-lg border-b border-gray-700 font-mono">
+                <div className="bg-light-blue text-white px-4 py-2 text-sm rounded-t-lg border-b border-secondary font-mono">
                   {section.language || 'code'}
                 </div>
-                <pre className="bg-gray-900 text-gray-100 p-4 rounded-b-lg overflow-x-auto text-sm font-mono">
+                <pre className="bg-primary text-white p-4 rounded-b-lg overflow-x-auto text-sm font-mono border border-secondary">
                   <code>{section.content}</code>
                 </pre>
               </div>
@@ -93,14 +93,14 @@ export default function BlogContent({ content }: BlogContentProps) {
           
           case 'quote':
             return (
-              <blockquote key={index} className="border-l-4 border-blue-500 pl-6 py-2 my-6 italic text-gray-600 bg-blue-50 rounded-r-lg">
+              <blockquote key={index} className="border-l-4 border-secondary pl-6 py-2 my-6 italic text-white bg-secondary/10 rounded-r-lg">
                 "{section.content}"
               </blockquote>
             );
 
-            case 'link':
+          case 'link':
             return (
-              <a key={index} href={section.content} className="text-blue-500 underline">
+              <a key={index} href={section.content} className="text-secondary underline hover:text-secondary-dark">
                 {section.content}
               </a>
             );

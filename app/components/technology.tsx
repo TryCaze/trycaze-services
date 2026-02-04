@@ -138,14 +138,14 @@ const serviceTechnologies = [
         name: 'WordPress', 
         icon: BsWordpress,
         shortDescription: 'E-commerce sustav',
-        longDescription: 'WordPress je popularan sustav za upravljanje sadržajem (CMS) koji omogućuje jednostavno stvaranje i upravljanje web stranicama i e-trgovinama.',
+        longDescription: 'WordPress je popularan sustav za upravljanje sadržajem (CMS) koji omogućuje jednostavno stvaranje i upravljanje e-trgovinama.',
         link: 'https://wordpress.com/',  
       },
       { 
         name: 'React', 
         icon: SiReact,
         shortDescription: 'Frontend biblioteka',
-        longDescription: 'JavaScript biblioteka za izradu interaktivnih korisničkih sučelja s višekratnim komponentama, koju održava Facebook i velika zajednica programera.',
+        longDescription: 'JavaScript biblioteka za izradu interaktivnih korisničkih sučelja s višekratnim komponentama.',
         link: 'https://react.dev/',  
       }
     ]
@@ -154,7 +154,6 @@ const serviceTechnologies = [
 
 
 export function TechnologyShowcase() {
-
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [hoveredTool, setHoveredTool] = useState<string | null>(null);
 
@@ -164,9 +163,11 @@ export function TechnologyShowcase() {
       ref={ref}
       className="relative py-16 sm:py-24 lg:py-32 overflow-hidden"
     >
+      <div className="absolute inset-x-0 top-0 h-px bg-white" />
       {/* Background elements */}
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5" />
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br" />
+      <div className="absolute inset-0 opacity-5" />
+      <div className="absolute top-1/4 -left-20 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl opacity-10" />
+      <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-indigo-500 rounded-full filter blur-3xl opacity-10" />
 
       <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Section header */}
@@ -174,10 +175,10 @@ export function TechnologyShowcase() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto text-center mb-16 lg:mb-24"
+          className="text-left max-w-3xl mx-auto mb-16 lg:mb-24"
         >
           <h2 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-300">
+            <span className="text-white">
               Tehnologije koje koristimo
             </span>
           </h2>
@@ -185,7 +186,7 @@ export function TechnologyShowcase() {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
-            className="mt-6 text-lg text-slate-300"
+            className="mt-6 text-xl text-white"
           >
             Tehnologije koje koristimo za pružanje vrhunskih usluga i rješenja.
           </motion.p>
@@ -202,7 +203,7 @@ export function TechnologyShowcase() {
                 transition={{ delay: 0.2 }}
                 className="flex items-center space-x-4"
               >
-                <service.icon className="w-8 h-8 text-blue-400" />
+                <service.icon className="w-8 h-8 text-secondary" />
                 <h3 className="text-2xl font-bold text-white">{service.name}</h3>
               </motion.div>
 
@@ -219,14 +220,14 @@ export function TechnologyShowcase() {
                     onMouseLeave={() => setHoveredTool(null)}
                   >
                     {/* Tool card */}
-                    <div className="h-full p-6 bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl cursor-pointer">
+                    <div className="h-full p-6 bg-primary rounded-xl cursor-pointer">
                       <div className="flex items-center space-x-4">
-                        <div className="p-3 bg-blue-500/10 rounded-lg">
-                          <tool.icon className="w-6 h-6 text-blue-400" />
+                        <div className="p-3 bg-secondary rounded-lg">
+                          <tool.icon className="w-6 h-6 text-white" />
                         </div>
                         <h4 className="text-lg font-medium text-white">{tool.name}</h4>
                       </div>
-                      <p className="mt-3 text-sm text-slate-400">{tool.shortDescription}</p>
+                      <p className="mt-3 text-sm text-gray-200">{tool.shortDescription}</p>
                     </div>
 
                     {/* Floating detail card - positioned above */}
@@ -239,23 +240,23 @@ export function TechnologyShowcase() {
                           transition={{ type: "spring", damping: 25, stiffness: 300 }}
                           className="absolute z-10 left-0 right-0 mx-auto -top-44 w-full max-w-md h-64 shadow-2xl"
                         >
-                          <div className="relative h-full w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-800">
+                          <div className="relative h-full w-full rounded-xl overflow-hidden bg-primary border border-slate-800">
                             {/* Glass overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 to-blue-900/20 backdrop-blur-sm p-6 flex flex-col">
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/20 backdrop-blur-sm p-6 flex flex-col">
                               <div className="flex items-center space-x-4 mb-4">
-                                <div className="p-3 bg-blue-500/10 rounded-lg">
-                                  <tool.icon className="w-6 h-6 text-blue-400" />
+                                <div className="p-3 bg-secondary rounded-lg">
+                                  <tool.icon className="w-6 h-6 text-white" />
                                 </div>
                                 <h3 className="text-xl font-bold text-white">{tool.name}</h3>
                               </div>
-                              <div className="bg-slate-800/50 rounded-lg p-4 backdrop-blur-sm flex-grow">
-                                <p className="text-slate-300">
+                              <div className="bg-secondary/30 rounded-lg p-4 backdrop-blur-sm flex-grow">
+                                <p className="text-white">
                                   {tool.longDescription}
                                 </p>
                               </div>
                               <Link 
                                 href={tool.link}
-                                className="mt-4 inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300"
+                                className="mt-4 inline-flex items-center text-sm font-medium text-secondary hover:text-secondary-dark"
                               >
                                 Web stranica <ArrowRight className="ml-1 w-4 h-4" /> 
                               </Link>

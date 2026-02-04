@@ -8,9 +8,11 @@ import {
   Rocket,
   Monitor,
   Smartphone,
-  Server
+  Server,
+  ArrowRight
 } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ONama() {
 
@@ -34,13 +36,13 @@ export default function ONama() {
 // Component: AboutHero
 function AboutHero() {
   return (
-    <section className="relative bg-slate-900 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5" />
+    <section className="relative bg-primary overflow-hidden">
+      <div className="absolute inset-0 opacity-5" />
       <motion.div 
         initial={{ scale: 1.2 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1 }}
-        className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-indigo-900/10"
+        className="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-light-blue/10"
       />
       
       <div className="relative px-4 py-28 sm:py-36 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -51,7 +53,7 @@ function AboutHero() {
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-300">
+            <span className="bg-clip-text text-white">
               O NAMA
             </span>
           </motion.h1>
@@ -60,7 +62,7 @@ function AboutHero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="max-w-2xl mx-auto mt-6 text-lg text-slate-300"
+            className="max-w-2xl mx-auto mt-6 text-lg text-white"
           >
             Jedino sigurno mjesto za Vaša tehnološka rješenja
           </motion.p>
@@ -76,7 +78,7 @@ function AboutHero() {
               alt="logo" 
               width={800} 
               height={450}
-              className="mx-auto rounded-xl shadow-2xl border border-slate-800"
+              className="mx-auto rounded-xl shadow-2xl border border-secondary bg-gray-300"
               priority
             />
           </motion.div>
@@ -115,14 +117,14 @@ function OurStory() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-slate-950/50">
+    <section className="py-16 sm:py-24 bg-light-blue/50">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-white sm:text-4xl">
           Naša razvijanja
         </h2>
         
         <div className="relative mt-16">
-          <div className="absolute left-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 to-indigo-600 transform -translate-x-1/2" />
+          <div className="absolute left-1/2 w-0.5 h-full bg-gradient-to-b from-secondary to-secondary-dark transform -translate-x-1/2" />
           
           <div className="space-y-16">
             {milestones.map((milestone, index) => (
@@ -133,19 +135,19 @@ function OurStory() {
                 transition={{ duration: 0.6 }}
                 className={`relative flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center`}
               >
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-lg z-10">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 border border-secondary/20 text-secondary font-bold text-lg z-10">
                   {milestone.year}
                 </div>
                 
                 <div className={`flex-1 ${index % 2 === 0 ? 'ml-8' : 'mr-8'}`}>
-                  <div className="p-6 bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl shadow-lg">
+                  <div className="p-6 bg-primary/50 backdrop-blur-sm border border-light-brown rounded-xl shadow-lg">
                     <div className="flex items-center mb-3">
-                      <milestone.icon className="w-5 h-5 text-blue-400 mr-2" />
+                      <milestone.icon className="w-5 h-5 text-secondary mr-2" />
                       <h3 className="text-xl font-semibold text-white">
                         {milestone.titleKey}
                       </h3>
                     </div>
-                    <p className="text-slate-400">
+                    <p className="text-white">
                       {milestone.descriptionKey}
                     </p>
                   </div>
@@ -203,15 +205,15 @@ function CoreValues() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -10 }}
-              className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl p-8 text-center"
+              className="bg-primary/50 backdrop-blur-sm border border-light-brown rounded-xl p-8 text-center"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-lg bg-blue-500/10">
-                <value.icon className="w-8 h-8 text-blue-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-lg bg-secondary/10">
+                <value.icon className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-white">
                 {value.titleKey}
               </h3>
-              <p className="mt-3 text-slate-400">
+              <p className="mt-3 text-white">
                 {value.descriptionKey}
               </p>
             </motion.div>
@@ -225,37 +227,36 @@ function CoreValues() {
 // Component: AboutCTA
 function AboutCTA() {
   return (
-    <section className="relative py-16 sm:py-24 bg-gradient-to-br from-blue-900/20 to-indigo-900/10">
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-10" />
-      
-      <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+        <section className="relative py-24">
+      <div className="absolute inset-0 opacity-5 pointer-events-none" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative max-w-2xl mx-auto text-center px-4 sm:px-6 lg:px-8 bg-primary/50 border border-secondary rounded-2xl backdrop-blur-md py-16"
+      >
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <span className="bg-clip-text text-white">
             Što čekate?
-          </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-lg text-slate-300">
-            Javite nam se danas da pronađete najbolja rješenja za Vas!
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="mailto:trycaze@proton.me"
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg"
-            >
-              Javite nam se
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="/services"
-              className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg border border-slate-700"
-            >
-              Usluge
-            </motion.a>
-          </div>
-        </div>
-      </div>
+          </span>
+        </h2>
+        <p className="text-white mb-8 text-lg">
+          Javite nam se danas da pronađete najbolja rješenja za Vas!
+        </p>
+        <Link
+          href="mailto:trycaze@proton.me"
+          className="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition mx-4"
+        >
+          Javite nam se <ArrowRight size={18} />
+        </Link>
+                <Link
+          href="mailto:trycaze@proton.me"
+          className="inline-flex items-center gap-2 bg-light-blue text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition"
+        >
+          Usluge <ArrowRight size={18} />
+        </Link>
+      </motion.div>
     </section>
   );
 }

@@ -41,27 +41,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {post.categories.map(category => (
               <span
                 key={category}
-                className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                className="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium"
               >
                 {categories[category as keyof typeof categories] || category}
               </span>
             ))}
             {post.featured && (
-              <span className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
+              <span className="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium">
                 Featured
               </span>
             )}
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{post.title}</h1>
           <p className="text-lg text-white mb-6">{post.description}</p>
 
           {/* Author and Meta Info */}
-          <div className="flex items-center justify-between border-t border-b py-4">
+          <div className="flex items-center justify-between border-t border-b py-4 border-secondary">
             <div className="flex items-center gap-3">
               <div>
-                <p className="font-semibold">{post.author}</p>
-                <div className="flex items-center gap-2 text-sm text-gray-500">
+                <p className="font-semibold text-white">{post.author}</p>
+                <div className="flex items-center gap-2 text-sm text-white">
                   <time dateTime={post.date}>
                     {new Date(post.date).toLocaleDateString('hr', {
                       year: 'numeric',
@@ -92,12 +92,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <BlogContent content={post.content} />
 
         {/* Tags */}
-        <div className="mt-8 pt-6 border-t">
+        <div className="mt-8 pt-6 border-t border-secondary">
           <div className="flex flex-wrap gap-2">
             {post.tags.map(tag => (
               <span
                 key={tag}
-                className="px-3 py-1 bg-gray-100 text-black rounded-full text-sm"
+                className="px-3 py-1 bg-secondary/10 text-white rounded-full text-sm"
               >
                 #{tag}
               </span>

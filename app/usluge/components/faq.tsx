@@ -50,7 +50,8 @@ export function Faq() {
 
   return (
     <section className="relative py-20">
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5 pointer-events-none" />
+      <div className="absolute inset-x-0 top-0 h-px bg-white" />
+      <div className="absolute inset-0 opacity-5 pointer-events-none" />
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -60,11 +61,11 @@ export function Faq() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
+            <span className="bg-clip-text text-white">
               Često postavljanja pitanja
             </span>
           </h2>
-          <p className="mt-4 text-slate-400 text-lg">
+          <p className="mt-4 text-white text-lg">
             Sve što trebate znati prije nego što krenete.
           </p>
         </motion.div>
@@ -73,7 +74,7 @@ export function Faq() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-slate-900/50 border border-slate-800 rounded-xl backdrop-blur-md transition"
+              className="bg-primary/50 border border-secondary rounded-xl backdrop-blur-md transition"
             >
               <button
                 onClick={() => toggle(index)}
@@ -81,7 +82,7 @@ export function Faq() {
               >
                 <span className="text-white font-medium">{faq.question}</span>
                 <ChevronDown
-                  className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${
+                  className={`w-5 h-5 text-white transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
@@ -93,7 +94,7 @@ export function Faq() {
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="overflow-hidden px-6 pb-4 text-slate-300 text-sm"
+                    className="overflow-hidden px-6 pb-4 text-white text-sm"
                   >
                     {faq.answer}
                   </motion.div>

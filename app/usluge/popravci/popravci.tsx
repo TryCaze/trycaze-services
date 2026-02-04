@@ -100,27 +100,27 @@ const services = [
 const steps = [
   {
     title: '1. Kontakt i dijagnostika',
-    icon: <PhoneCall className="w-5 h-5 text-blue-400" />,
+    icon: <PhoneCall className="w-5 h-5 text-secondary" />,
     description: 'Opišite problem ili donesite uređaj na besplatnu dijagnostiku.',
   },
   {
     title: '2. Ponuda i odobrenje',
-    icon: <Euro className="w-5 h-5 text-blue-400" />,
+    icon: <Euro className="w-5 h-5 text-secondary" />,
     description: 'Šaljemo vam detaljnu ponudu s cijenom i rokom izrade za odobrenje.',
   },
   {
     title: '3. Popravak',
-    icon: <Wrench className="w-5 h-5 text-blue-400" />,
+    icon: <Wrench className="w-5 h-5 text-secondary" />,
     description: 'Izvodimo profesionalne popravke koristeći kvalitetne komponente.',
   },
   {
     title: '4. Testiranje i garancija',
-    icon: <Shield className="w-5 h-5 text-blue-400" />,
+    icon: <Shield className="w-5 h-5 text-secondary" />,
     description: 'Testiramo popravak i izdajemo garanciju na izvršene usluge.',
   },
   {
     title: '5. Predaja uređaja',
-    icon: <Package className="w-5 h-5 text-blue-400" />,
+    icon: <Package className="w-5 h-5 text-secondary" />,
     description: 'Predajemo uređaj s dokumentacijom i garancijom.',
   }
 ];
@@ -174,7 +174,7 @@ export default function PCRepairsPage() {
   } as const;
 
   return (
-    <main className="bg-slate-950 text-white">
+    <main className="bg-primary text-white">
       {/* Hero Section */}
       <section id="hero" className="py-24 px-4 text-center">
         <motion.div
@@ -182,23 +182,23 @@ export default function PCRepairsPage() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
             Servis računala i opreme
           </h1>
-          <p className="text-slate-400 text-lg">
+          <p className="text-white text-lg">
             Brza dijagnostika i profesionalni popravci računala, prijenosnika, printera i ostale opreme.
             Koristimo kvalitetne komponente i pružamo garanciju na izvršene usluge.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               href="#pricing"
-              className="inline-block bg-blue-500 hover:bg-blue-600 transition-colors text-white font-semibold py-3 px-6 rounded-xl"
+              className="inline-block bg-secondary hover:bg-secondary-dark transition-colors text-white font-semibold py-3 px-6 rounded-xl"
             >
               Cijene popravaka
             </Link>
             <Link
-              href="#contact"
-              className="inline-block border border-slate-700 hover:border-slate-600 transition-colors text-white font-semibold py-3 px-6 rounded-xl"
+              href="/form/narudzba-popravaka"
+              className="inline-block border border-secondary hover:border-secondary-dark transition-colors text-white font-semibold py-3 px-6 rounded-xl"
             >
               Zakaži servis
             </Link>
@@ -207,12 +207,12 @@ export default function PCRepairsPage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 px-4 bg-slate-900">
+      <section className="py-20 px-4 bg-light-blue">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             {...fadeUp}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold text-center mb-12"
+            className="text-3xl font-bold text-center mb-12 text-white"
           >
             Zašto odabrati naš servis?
           </motion.h2>
@@ -220,22 +220,22 @@ export default function PCRepairsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <Shield className="w-8 h-8" />,
+                icon: <Shield className="w-8 h-8 text-secondary" />,
                 title: "Garancija",
                 description: "Garancija na sve popravke i komponente"
               },
               {
-                icon: <Clock className="w-8 h-8" />,
+                icon: <Clock className="w-8 h-8 text-secondary" />,
                 title: "Brzi servis",
                 description: "Većina popravaka završena unutar 2-3 dana"
               },
               {
-                icon: <CircuitBoard className="w-8 h-8" />,
+                icon: <CircuitBoard className="w-8 h-8 text-secondary" />,
                 title: "Kvalitetni dijelovi",
                 description: "Koristimo provjerene i kvalitetne komponente"
               },
               {
-                icon: <Settings className="w-8 h-8" />,
+                icon: <Settings className="w-8 h-8 text-secondary" />,
                 title: "Iskusni tehničari",
                 description: "Profesionalci s višegodišnjim iskustvom"
               }
@@ -245,11 +245,11 @@ export default function PCRepairsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 text-center"
+                className="bg-primary/50 backdrop-blur-sm rounded-xl p-6 border border-secondary text-center"
               >
-                <div className="text-blue-400 mb-4 flex justify-center">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-slate-400">{item.description}</p>
+                <div className="text-secondary mb-4 flex justify-center">{item.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
+                <p className="text-white">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -257,12 +257,12 @@ export default function PCRepairsPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-light-blue">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             {...fadeUp}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold text-center mb-12"
+            className="text-3xl font-bold text-center mb-12 text-white"
           >
             Naše Usluge Servisiranja
           </motion.h2>
@@ -274,16 +274,16 @@ export default function PCRepairsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-colors"
+                className="bg-primary/50 backdrop-blur-sm rounded-xl p-6 border border-secondary hover:border-secondary-dark transition-colors"
               >
-                <div className="text-blue-400 mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-slate-400 mb-4">{service.description}</p>
+                <div className="text-secondary mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
+                <p className="text-white mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.details.map((detail, i) => (
                     <li key={i} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-300">{detail}</span>
+                      <CheckCircle className="w-5 h-5 text-secondary mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-white">{detail}</span>
                     </li>
                   ))}
                 </ul>
@@ -294,8 +294,8 @@ export default function PCRepairsPage() {
       </section>
 
       {/* Process Section */}
-      <section className="relative py-20">
-        <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5 pointer-events-none" />
+      <section className="relative py-20 bg-light-blue">
+        <div className="absolute inset-0 opacity-5 pointer-events-none" />
 
         <div className="relative px-4 max-w-4xl mx-auto sm:px-6 lg:px-8">
           <motion.div
@@ -305,11 +305,11 @@ export default function PCRepairsPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
+              <span className="text-white">
                 Kako funkcionira servis
               </span>
             </h2>
-            <p className="mt-4 text-slate-400 text-lg">
+            <p className="mt-4 text-white text-lg">
               Jednostavan i transparentan proces popravka
             </p>
           </motion.div>
@@ -321,12 +321,12 @@ export default function PCRepairsPage() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="flex items-start gap-4 bg-slate-900/50 border border-slate-800 rounded-xl p-6 backdrop-blur-md"
+                className="flex items-start gap-4 bg-primary/50 border border-secondary rounded-xl p-6 backdrop-blur-md"
               >
-                <div className="bg-blue-500/10 rounded-full p-2">{step.icon}</div>
+                <div className="bg-secondary/10 rounded-full p-2">{step.icon}</div>
                 <div>
                   <h3 className="text-white font-medium text-base mb-1">{step.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{step.description}</p>
+                  <p className="text-white text-sm leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -339,7 +339,7 @@ export default function PCRepairsPage() {
         <motion.h2
           {...fadeUp}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center mb-12"
+          className="text-3xl font-bold text-center mb-12 text-white"
         >
           Cijene servisa
         </motion.h2>
@@ -386,36 +386,36 @@ export default function PCRepairsPage() {
               key={p.name}
               {...fadeUp}
               transition={{ delay: i * 0.05, duration: 0.6 }}
-              className="rounded-2xl border border-slate-800 bg-slate-900 p-6"
+              className="rounded-2xl border border-secondary bg-primary/50 p-6"
             >
-              <h3 className="text-xl font-semibold mb-2">{p.name}</h3>
-              <p className="text-3xl font-bold mb-4">{p.price}</p>
-              <ul className="space-y-2 mb-6 text-slate-300">
+              <h3 className="text-xl font-semibold mb-2 text-white">{p.name}</h3>
+              <p className="text-3xl font-bold mb-4 text-secondary">{p.price}</p>
+              <ul className="space-y-2 mb-6 text-white">
                 {p.features.map((f) => (
                   <li key={f} className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mr-3 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-secondary mr-3 mt-1" />
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
               <Link
-                href="#contact"
-                className="inline-block w-full text-center bg-blue-500 hover:bg-blue-600 transition-colors text-white font-semibold py-3 rounded-xl"
+                href="/form/narudzba-popravaka"
+                className="inline-block w-full text-center bg-secondary hover:bg-secondary-dark transition-colors text-white font-semibold py-3 rounded-xl"
               >
                 Zatraži ponudu
               </Link>
             </motion.div>
           ))}
         </div>
-        <p className="text-center text-slate-400 mt-4 text-sm">
+        <p className="text-center text-white mt-4 text-sm">
           * Cijene su informativne i ovise o konkretnom kvaru i modelu uređaja.
           Cijene komponenti se naplaćuju posebno.
         </p>
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-20">
-        <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5 pointer-events-none" />
+      <section className="relative py-20 bg-light-blue">
+        <div className="absolute inset-0 opacity-5 pointer-events-none" />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -425,11 +425,11 @@ export default function PCRepairsPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
+              <span className="text-white">
                 Često postavljana pitanja
               </span>
             </h2>
-            <p className="mt-4 text-slate-400 text-lg">
+            <p className="mt-4 text-white text-lg">
               Sve što trebate znati prije servisa
             </p>
           </motion.div>
@@ -438,7 +438,7 @@ export default function PCRepairsPage() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-slate-900/50 border border-slate-800 rounded-xl backdrop-blur-md transition"
+                className="bg-primary/50 border border-secondary rounded-xl backdrop-blur-md transition"
               >
                 <button
                   onClick={() => toggle(index)}
@@ -446,7 +446,7 @@ export default function PCRepairsPage() {
                 >
                   <span className="text-white font-medium">{faq.q}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${
+                    className={`w-5 h-5 text-white transition-transform duration-300 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                   />
@@ -458,7 +458,7 @@ export default function PCRepairsPage() {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="overflow-hidden px-6 pb-4 text-slate-300 text-sm"
+                      className="overflow-hidden px-6 pb-4 text-white text-sm"
                     >
                       {faq.a}
                     </motion.div>
@@ -471,28 +471,34 @@ export default function PCRepairsPage() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 px-4 text-center bg-gradient-to-r from-blue-500/10 to-indigo-500/10">
+      <section id="contact" className="py-20 px-4 text-center bg-light-blue">
         <motion.div
           {...fadeUp}
           transition={{ duration: 0.5 }}
           className="max-w-2xl mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Trebate servis?</h2>
-          <p className="text-slate-300 mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Trebate servis?</h2>
+          <p className="text-white mb-6">
             Kontaktirajte nas za besplatnu dijagnostiku ili pošaljite upit za popravak.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="mailto:trycaze@proton.me?subject=Upit%20za%20servis%20računala&body=Pozdrav%2C%0A%0ATrebao/la bih servis računala.%20Molim vas da me kontaktirate kako bismo dogovorili detalje.%0A%0AOpis problema:%0A%0ATip uređaja (računalo, prijenosnik, printer):%0A%0AHvala!"
-              className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl"
+              href="/form/narudzba-popravaka"
+              className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-6 rounded-xl"
             >
               Pošalji upit
             </Link>
+            <Link
+              href="mailto:trycaze@proton.me?subject=Upit%20za%20servis%20računala&body=Pozdrav%2C%0A%0ATrebao/la bih servis računala.%20Molim vas da me kontaktirate kako bismo dogovorili detalje.%0A%0AOpis problema:%0A%0ATip uređaja (računalo, prijenosnik, printer):%0A%0AHvala!"
+              className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-6 rounded-xl"
+            >
+              Javite nam se
+            </Link>
           </div>
-          <p className="text-slate-400 mt-6 text-sm">
+          <p className="text-white mt-6 text-sm">
             Radno vrijeme: Pon-Pet 7:00 - 19:00
           </p>
-          <p className="text-slate-400 text-sm">
+          <p className="text-white text-sm">
             Sub 9:00-14:00, Nedjeljom zatvoreno
           </p>
         </motion.div>

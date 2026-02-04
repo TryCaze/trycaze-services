@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 export default function CaseStudy() {
   return (
     <section className="relative bg-black text-slate-300 py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5 pointer-events-none" />
+      <div className="absolute inset-0 opacity-5 pointer-events-none" />
 
       <div className="relative mb-16 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">

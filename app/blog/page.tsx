@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
     return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8">Blogovi</h1>
+      <h1 className="text-4xl font-bold mb-8 text-white">Blogovi</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {allBlogPosts.map((post) => (
           <BlogCard key={post.slug} post={post} />

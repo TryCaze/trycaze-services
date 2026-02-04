@@ -14,7 +14,7 @@ export function Footer({ onResetCookies }: FooterProps) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="bg-slate-900 border-t border-slate-800"
+      className="bg-primary"
     >
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -25,21 +25,21 @@ export function Footer({ onResetCookies }: FooterProps) {
             transition={{ delay: 0.1 }}
           >
             <div className="flex items-center space-x-3 mb-4">
-              <Image src="/images/logo.svg" alt="Logo" width={40} height={40} />
+              <Image src="/images/trylogo.png" alt="Logo" width={40} height={40} />
               <span className="text-xl font-bold text-white">TryCaze</span>
             </div>
             <div className="flex space-x-4">
               <motion.a
                 href="https://github.com/TryCaze"
                 whileHover={{ y: -3, scale: 1.1 }}
-                className="text-slate-400 hover:text-blue-400 transition-colors"
+                className="text-gray-300 hover:text-secondary transition-colors"
               >
                 <Github className="w-5 h-5" />
               </motion.a>
               <motion.a
                 href="https://www.instagram.com/trycaze/"
                 whileHover={{ y: -3, scale: 1.1 }}
-                className="text-slate-400 hover:text-blue-400 transition-colors"
+                className="text-gray-300 hover:text-secondary transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </motion.a>
@@ -57,22 +57,22 @@ export function Footer({ onResetCookies }: FooterProps) {
             </h3>
             <ul className="space-y-3">
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/usluge" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge" className="text-gray-300 hover:text-secondary transition-colors">
                   Usluge
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/#technology" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/#technology" className="text-gray-300 hover:text-secondary transition-colors">
                   Tehnologija
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/o-nama" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/o-nama" className="text-gray-300 hover:text-secondary transition-colors">
                   O nama
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <a href="mailto:trycaze@proton.me" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <a href="mailto:trycaze@proton.me" className="text-gray-300 hover:text-secondary transition-colors">
                   Kontakt
                 </a>
               </motion.li>
@@ -90,32 +90,32 @@ export function Footer({ onResetCookies }: FooterProps) {
             </h3>
             <ul className="space-y-3">
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/usluge/poslovne" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/poslovne" className="text-gray-300 hover:text-secondary transition-colors">
                   Poslovne usluge
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/usluge/it-podrska" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/it-podrska" className="text-gray-300 hover:text-secondary transition-colors">
                   IT podrška
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/usluge/popravci" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/popravci" className="text-gray-300 hover:text-secondary transition-colors">
                   Popravci
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/usluge/sastavljanje-racunala" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/sastavljanje-racunala" className="text-gray-300 hover:text-secondary transition-colors">
                   Postavljanje
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/usluge/3dprintanje" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/3dprintanje" className="text-gray-300 hover:text-secondary transition-colors">
                   3D Printanje
                 </Link>
               </motion.li>
               <motion.li whileHover={{ x: 5 }}>
-                <Link href="/usluge/izrada-web-stranica" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Link href="/usluge/izrada-web-stranica" className="text-gray-300 hover:text-secondary transition-colors">
                   Web razvoj
                 </Link>
               </motion.li>
@@ -133,14 +133,14 @@ export function Footer({ onResetCookies }: FooterProps) {
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-blue-400 mt-0.5" />
-                <a href="mailto:trycaze@proton.me" className="text-slate-400">
+                <Mail className="w-5 h-5 text-secondary mt-0.5" />
+                <a href="mailto:trycaze@proton.me" className="text-gray-300">
                   trycaze@proton.me
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <Clock className="w-5 h-5 text-blue-400 mt-0.5" />
-                <span className="text-slate-400">7:00 - 19:00</span>
+                <Clock className="w-5 h-5 text-secondary mt-0.5" />
+                <span className="text-gray-300">7:00 - 19:00</span>
               </li>
             </ul>
           </motion.div>
@@ -151,7 +151,7 @@ export function Footer({ onResetCookies }: FooterProps) {
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ delay: 0.5 }}
-          className="border-t border-slate-800 my-12"
+          className="border-t border-white my-12"
         />
 
         {/* Copyright */}
@@ -159,17 +159,17 @@ export function Footer({ onResetCookies }: FooterProps) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm"
+          className="flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm"
         >
           <div className="mb-4 md:mb-0">
             TryCaze © {new Date().getFullYear()}. Sva prava pridržana.
           </div>
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
             <div className="flex space-x-6">
-              <Link href="/privatnost" className="hover:text-blue-400 transition-colors">
+              <Link href="/privatnost" className="hover:text-secondary transition-colors">
                 Privatnost
               </Link>
-              <Link href="/privatnost" className="hover:text-blue-400 transition-colors">
+              <Link href="/privatnost" className="hover:text-secondary transition-colors">
                 Kolačići
               </Link>
             </div>
@@ -180,7 +180,7 @@ export function Footer({ onResetCookies }: FooterProps) {
                 onClick={onResetCookies}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center space-x-1 text-slate-400 hover:text-red-400 transition-colors mt-2 md:mt-0 md:ml-6"
+                className="flex items-center space-x-1 text-gray-300 hover:text-red-400 transition-colors mt-2 md:mt-0 md:ml-6"
                 title="Resetiraj postavke kolačića"
               >
                 <Trash2 className="w-4 h-4" />

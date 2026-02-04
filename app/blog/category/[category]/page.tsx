@@ -8,6 +8,23 @@ interface CategoryPageProps {
   }>;
 }
 
+function getPluralForm(count: number): string {
+  const lastDigit = count % 10;
+  const lastTwoDigits = count % 100;
+
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+    return 'objava';
+  }
+
+  if (lastDigit === 1) {
+    return 'objava';
+  } else if (lastDigit >= 2 && lastDigit <= 4) {
+    return 'objave';
+  } else {
+    return 'objava';
+  }
+}
+
 export default async function CategoryPage({ params }: CategoryPageProps) {
   // Await the params first
   const { category } = await params;
@@ -22,9 +39,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-2">Category: {categoryName}</h1>
-        <p className="text-gray-600">
-          {posts.length} post{posts.length !== 1 ? 's' : ''} in this category
+        <h1 className="text-4xl font-bold mb-2">Kategorija: {categoryName}</h1>
+        <p className="text-white">
+          {posts.length} {getPluralForm(posts.length)} u ovoj kategoriji.
         </p>
       </div>
 

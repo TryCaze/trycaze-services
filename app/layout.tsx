@@ -5,6 +5,12 @@ import { Footer } from "./components/ui/footer";
 import { useEffect, useState } from "react";
 import Script from "next/script";
 import ScrollToTop from "./components/ui/scrollToTop";
+import { Poppins } from 'next/font/google'
+
+const mf = Poppins({
+  subsets: ['latin'],
+  weight: '400'
+})
 
 export default function RootLayout({
   children,
@@ -91,12 +97,12 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <ScrollToTop />
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className={mf.className}>{children}</main>
         <Footer onResetCookies={handleResetCookies} />
 
         {/* Show cookie banner only when no decision has been made (null) */}
         {cookieConsent === null && (
-          <div className="fixed bottom-4 left-4 right-4 md:left-8 md:right-8 bg-gray-900 text-white p-3 flex flex-col md:flex-row items-center justify-between z-50 rounded-xl max-w-4xl mx-auto shadow-lg">
+          <div className="fixed bottom-4 left-4 right-4 md:left-8 md:right-8 bg-white text-gray-900 p-3 flex flex-col md:flex-row items-center justify-between z-50 rounded-xl max-w-4xl mx-auto shadow-lg">
             <p className="mb-2 md:mb-0 md:mr-4 text-sm">
               Ova stranica koristi kolačiće za praćenje posjeta i poboljšanje korisničkog iskustva.{" "}
               <a href="/privatnost" className="underline">
@@ -106,13 +112,13 @@ export default function RootLayout({
             <div className="flex space-x-2">
               <button
                 onClick={handleAccept}
-                className="bg-blue-700 text-white px-3 py-1.5 rounded-lg hover:bg-blue-800 transition text-sm"
+                className="bg-primary text-white px-3 py-1.5 rounded-lg hover:bg-blue-800 transition text-sm"
               >
                 Prihvaćam
               </button>
               <button
                 onClick={handleDecline}
-                className="bg-gray-700 text-white px-3 py-1.5 rounded-lg hover:bg-gray-600 transition text-sm"
+                className="bg-secondary text-white px-3 py-1.5 rounded-lg hover:bg-gray-600 transition text-sm"
               >
                 Odbijam
               </button>

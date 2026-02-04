@@ -416,7 +416,7 @@ export default function OSRecommender() {
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center text-white px-6 mb-4 mt-4">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] bg-center opacity-10" />
+        <div className="absolute top-0 left-0 w-full h-full opacity-10" />
         <motion.div
           initial={{ x: -100, y: -100, opacity: 0 }}
           animate={{ x: 0, y: 0, opacity: 0.3 }}

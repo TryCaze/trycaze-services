@@ -7,7 +7,7 @@ export default function CaseStudy() {
   return (
     <section className="relative bg-black text-slate-300 py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
       {/* Background Grid */}
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5 pointer-events-none" />
+      <div className="absolute inset-0 opacity-5 pointer-events-none" />
 
       {/* Header */}
       <div className="relative mb-16 text-center">

@@ -6,7 +6,7 @@ import { Globe, Laptop2, Wrench, Settings, Network, Server, ChevronDown, Printer
 const services = [
   {
     title: 'Poslovne usluge',
-    icon: <Globe className="w-5 h-5 text-blue-400" />,
+    icon: <Globe className="w-5 h-5 text-secondary" />,
     description: 'Implementacija Microsoft 365 poslovnih rješenja za bolju organizaciju, automatizaciju i obradu velikih količina podataka. Idealno za mala i srednja poduzeća koja žele povećati učinkovitost i timsku suradnju putem gotovih predložaka i pametne integracije alata.',
     pointOne: 'Korištenje gotovih predložaka za ubrzanje poslovnih procesa.',
     pointTwo: 'Učinkovita obrada i organizacija velikih skupova podataka.',
@@ -14,7 +14,7 @@ const services = [
   },
   {
     title: 'IT podrška',
-    icon: <Laptop2 className="w-5 h-5 text-blue-400" />,
+    icon: <Laptop2 className="w-5 h-5 text-secondary" />,
     description: 'Pouzdana udaljena i lokalna tehnička podrška za krajnje korisnike i poslovne sustave. Naš tim osigurava neprekinut rad vaših uređaja i mreža, brzo rješavanje problema i sveobuhvatnu zaštitu vaših podataka.',
     pointOne: 'Brza udaljena pomoć putem sigurnih poveznica i pristupa.',
     pointTwo: 'Dolazak na lokaciju u slučaju ozbiljnijih problema s hardverom ili mrežom.',
@@ -22,7 +22,7 @@ const services = [
   },
   {
     title: 'Popravci',
-    icon: <Wrench className="w-5 h-5 text-blue-400" />,
+    icon: <Wrench className="w-5 h-5 text-secondary" />,
     description: 'Brza dijagnostika i profesionalni popravci računala, prijenosnika, printera i ostale opreme. Koristimo kvalitetne komponente i pružamo garanciju na izvršene usluge.',
     pointOne: 'Detaljna hardverska i softverska dijagnostika za precizno otkrivanje kvara.',
     pointTwo: 'Zamjena neispravnih komponenti poput RAM-a, SSD-a, napajanja i ventilatora.',
@@ -30,7 +30,7 @@ const services = [
   },
   {
     title: 'Postavljanje sustava',
-    icon: <Settings className="w-5 h-5 text-blue-400" />,
+    icon: <Settings className="w-5 h-5 text-secondary" />,
     description: 'Kompletno postavljanje i konfiguracija novih i postojećih računala, uključujući instalaciju operativnih sustava, osnovnih programa te povezivanje s mrežnim servisima.',
     pointOne: 'Instalacija fizičkih komponenti i priprema uređaja za rad.',
     pointTwo: 'Postavljanje softvera i optimizacija prema vrsti korištenja (poslovno, osobno, gaming).',
@@ -38,7 +38,7 @@ const services = [
   },
   {
     title: '3D Printanje',
-    icon: <PrinterCheck className="w-5 h-5 text-blue-400" />,
+    icon: <PrinterCheck className="w-5 h-5 text-secondary" />,
     description: 'Nudimo usluge 3D printanja za različite potrebe, od prototipiranja do finalnih proizvoda. Koristimo Creality 3D printere koji omogućuju precizne i kvalitetne ispise u različitim materijalima.',
     pointOne: 'Izrada 3D modela prema specifikacijama klijenta ili iz postojećih dizajna.',
     pointTwo: 'Odabir pravih materijala za 3D ispis, uključujući PLA, ABS i PETG.',
@@ -46,7 +46,7 @@ const services = [
   },
   {
     title: 'Web razvoj',
-    icon: <Server className="w-5 h-5 text-blue-400" />,
+    icon: <Server className="w-5 h-5 text-secondary" />,
     description: 'Izrada modernih, brzih i responzivnih web stranica i aplikacija temeljenih na Next.js tehnologiji. Savršeno za male tvrtke koje žele profesionalan online nastup, uz mogućnost daljnje nadogradnje i održavanja.',
     pointOne: 'Razvoj funkcionalnih web shopova, portfolia i poslovnih stranica.',
     pointTwo: 'Estetski ugodan dizajn i intuitivno korisničko sučelje prilagođeno svim uređajima.',
@@ -64,7 +64,8 @@ export function DetailedServices() {
 
   return (
     <section className="relative py-20">
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5 pointer-events-none" />
+      <div className="absolute inset-x-0 top-0 h-px bg-white" />
+      <div className="absolute inset-0 opacity-5 pointer-events-none" />
 
       <div className="relative max-w-3xl px-4 mx-auto sm:px-6 lg:px-8">
         <motion.div
@@ -74,11 +75,11 @@ export function DetailedServices() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
+            <span className="bg-clip-text text-white">
               Detaljne usluge
             </span>
           </h2>
-          <p className="mt-4 text-slate-400 text-lg">
+          <p className="mt-4 text-white text-lg">
             Istražite šta sve usluge rade za Vas. Jednostavno, čisto i razumljivo na jednom mjestu.
           </p>
         </motion.div>
@@ -88,7 +89,7 @@ export function DetailedServices() {
           {services.map((service, i) => (
             <div
               key={i}
-              className="bg-slate-900/50 border border-slate-800 rounded-xl backdrop-blur-md transition"
+              className="bg-primary/50 border border-secondary rounded-xl backdrop-blur-md transition"
             >
               <button
                 onClick={() => toggle(i)}
@@ -99,7 +100,7 @@ export function DetailedServices() {
                   <span className="text-white font-medium">{service.title}</span>
                 </div>
                 <ChevronDown
-                  className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${
+                  className={`w-5 h-5 text-white transition-transform duration-300 ${
                     openIndex === i ? 'rotate-180' : ''
                   }`}
                 />
@@ -117,7 +118,7 @@ export function DetailedServices() {
                       collapsed: { height: 0, opacity: 0 },
                     }}
                     transition={{ duration: 0.4, ease: 'easeInOut' }}
-                    className="overflow-hidden px-6 pb-4 text-slate-300 text-sm"
+                    className="overflow-hidden px-6 pb-4 text-white text-sm tracking-wide"
                   >
                     {service.description}
                     <li>

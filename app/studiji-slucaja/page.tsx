@@ -25,7 +25,7 @@ export default function CaseStudies() {
     <section id="case-studies" ref={ref} className="relative py-16 sm:py-24 lg:py-32 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] bg-center" />
+        <div className="absolute top-0 left-0 w-full h-full" />
       </div>
       
       <div className="absolute top-1/4 -left-20 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl opacity-10" />

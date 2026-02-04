@@ -56,15 +56,14 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="bg-gray-900/80 backdrop-blur-md border-b border-gray-700 text-white sticky top-0 z-50 shadow-lg rounded-b-2xl transition-all duration-300">
+    <header className="bg-secondary-dark backdrop-blur-md border-b border-light-blue text-white font-bold sticky top-0 z-50 shadow-lg transition-all duration-300">
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
           <Image 
-            src="/images/logo.svg" 
+            src="/favico.png" 
             alt="TryCaze Logo" 
-            width={80} 
-            height={80} 
-            className="rounded-full"
+            width={32} 
+            height={32} 
           />
           <span className="ml-3 text-xl font-bold hidden sm:block">TryCaze</span>
         </div>
@@ -73,13 +72,13 @@ export function Navbar() {
         <nav className="hidden md:flex space-x-2 items-center">
           <Link
             href='/'
-            className="flex items-center hover:bg-gray-700 px-4 py-2 rounded-full transition-colors"
+            className="flex items-center hover:bg-primary px-4 py-2 rounded-full transition-colors"
           >
             <Home className="mr-2" size={18} /> Početna
           </Link>
           <Link 
             href={`/o-nama`} 
-            className="flex items-center hover:bg-gray-700 px-4 py-2 rounded-full transition-colors"
+            className="flex items-center hover:bg-primary px-4 py-2 rounded-full transition-colors"
           >
             <Info className="mr-2" size={18} /> O nama
           </Link>
@@ -88,7 +87,7 @@ export function Navbar() {
           <div className="relative">
             <button
               onClick={() => setDropdownOpen((prev) => !prev)}
-              className="flex items-center hover:bg-gray-700 px-4 py-2 rounded-full transition-colors"
+              className="flex items-center hover:bg-primary px-4 py-2 rounded-full transition-colors"
             >
               <ChevronsLeftRightEllipsisIcon className="mr-2" size={18} />
               Usluge <span className="ml-1">▼</span>
@@ -96,22 +95,23 @@ export function Navbar() {
             <AnimatePresence>
               {dropdownOpen && (
                 <motion.ul
-                  className="absolute z-50 mt-2 w-64 bg-gray-900 rounded-2xl shadow-lg overflow-hidden"
+                  className="absolute z-50 mt-4 w-64 bg-secondary-dark rounded-b-2xl shadow-lg overflow-hidden"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.15 }}
                 >
                   {services.map(({ label, icon: Icon, path }) => (
-                    <Link href={path} onClick={() => setMenuOpen(false)}>
-                    <li
-                      key={label}
-                      className="flex items-center px-4 py-3 hover:bg-gray-700 cursor-pointer transition-colors"
-                    >
-                      <Icon className="mr-3" size={18} />
-                      {label}
+                    <li key={label}>
+                      <Link 
+                        href={path} 
+                        onClick={() => setMenuOpen(false)}
+                        className="flex items-center px-4 py-3 hover:bg-primary cursor-pointer transition-colors text-gray-100"
+                      >
+                        <Icon className="mr-3" size={18} />
+                        {label}
+                      </Link>
                     </li>
-                    </Link>
                   ))}
                 </motion.ul>
               )}
@@ -119,13 +119,13 @@ export function Navbar() {
           </div>
           <a
             href="/blog"
-            className="flex items-center hover:bg-gray-700 px-4 py-2 rounded-full transition-colors"
+            className="flex items-center hover:bg-primary px-4 py-2 rounded-full transition-colors"
           >
             <MessageSquareDot className='mr-2' size={18} />  Blogovi
           </a>
           <a
             href="mailto:trycaze@proton.me"
-            className="flex items-center hover:bg-gray-700 px-4 py-2 rounded-full transition-colors"
+            className="flex items-center hover:bg-primary px-4 py-2 rounded-full transition-colors"
           >
             <Phone className="mr-2" size={18} /> Kontakt
           </a>
@@ -133,7 +133,7 @@ export function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 hover:bg-gray-700 rounded-full transition-colors"
+          className="md:hidden p-2 hover:bg-primary rounded-full transition-colors"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -145,7 +145,7 @@ export function Navbar() {
         {menuOpen && (
           <motion.div
             ref={menuRef}
-            className="md:hidden bg-gray-800/90 backdrop-blur-md text-white px-5 pb-5 space-y-2 rounded-b-2xl shadow-xl"
+            className="md:hidden bg-secondary-dark backdrop-blur-md text-white px-5 pb-5 space-y-2 rounded-b-2xl shadow-xl"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -153,15 +153,15 @@ export function Navbar() {
           >
             <Link 
               href={`/`}
-              className="flex py-3 px-4 items-center hover:bg-gray-700 rounded-full transition-colors"
+              className="flex py-3 px-4 items-center hover:bg-primary rounded-full transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               <Home className="mr-3" size={18} /> Početna
             </Link>
             
             <Link 
-              href={`/about`} 
-              className="flex py-3 px-4 items-center hover:bg-gray-700 rounded-full transition-colors"
+              href={`/o-nama`} 
+              className="flex py-3 px-4 items-center hover:bg-primary rounded-full transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               <Info className="mr-3" size={18} /> O nama
@@ -170,7 +170,7 @@ export function Navbar() {
             <div className="space-y-2">
               <button
                 onClick={() => setDropdownOpen((prev) => !prev)}
-                className="flex items-center w-full py-3 px-4 hover:bg-gray-700 rounded-full transition-colors"
+                className="flex items-center w-full py-3 px-4 hover:bg-primary rounded-full transition-colors"
               >
                 <ChevronsLeftRightEllipsisIcon className="mr-3" size={18} />
                 Usluge <span className="ml-1">▼</span>
@@ -179,22 +179,23 @@ export function Navbar() {
               <AnimatePresence>
                 {dropdownOpen && (
                   <motion.ul
-                    className="ml-6 bg-gray-700 rounded-xl overflow-hidden"
+                    className="ml-6 bg-primary rounded-xl overflow-hidden"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.15 }}
                   >
                     {services.map(({ label, icon: Icon, path }) => (
-                      <Link href={path} onClick={() => setMenuOpen(false)}>
-                      <li
-                        key={label}
-                        className="flex items-center px-4 py-3 hover:bg-gray-600 cursor-pointer transition-colors"
-                      >
-                        <Icon className="mr-3" size={18} />
-                        {label}
+                      <li key={label}>
+                        <Link 
+                          href={path} 
+                          onClick={() => setMenuOpen(false)}
+                          className="flex items-center px-4 py-3 hover:bg-secondary cursor-pointer transition-colors text-gray-100"
+                        >
+                          <Icon className="mr-3" size={18} />
+                          {label}
+                        </Link>
                       </li>
-                      </Link>
                     ))}
                   </motion.ul>
                 )}
@@ -203,15 +204,15 @@ export function Navbar() {
 
             <a
             href="/blog"
-            className="flex py-3 px-4 items-center hover:bg-gray-700 rounded-full transition-colors"
+            className="flex py-3 px-4 items-center hover:bg-primary rounded-full transition-colors"
             onClick={() => setMenuOpen(false)}
             >
-              <MessageSquareDot className="mr-3" size={18}/> Blog
+              <MessageSquareDot className="mr-3" size={18}/> Blogovi
             </a>
 
             <a
               href="mailto:trycaze@proton.me" 
-              className="flex py-3 px-4 items-center hover:bg-gray-700 rounded-full transition-colors"
+              className="flex py-3 px-4 items-center hover:bg-primary rounded-full transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               <Phone className="mr-3" size={18} /> Kontakt

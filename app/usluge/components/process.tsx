@@ -5,22 +5,22 @@ import { CalendarClock, FileText, Wrench, ThumbsUp } from 'lucide-react';
 const steps = [
   {
     title: '1. Rezervirajte besplatni poziv',
-    icon: <CalendarClock className="w-5 h-5 text-blue-400" />,
+    icon: <CalendarClock className="w-5 h-5 text-secondary" />,
     description: 'Razgovaramo o vašim potrebama, ciljevima i trenutnoj postavci. Bez ikakve obveze.',
   },
   {
     title: '2. Primite prilagođeni plan',
-    icon: <FileText className="w-5 h-5 text-blue-400" />,
+    icon: <FileText className="w-5 h-5 text-secondary" />,
     description: 'Dobit ćete jasan prijedlog s vremenskim okvirom, opsegom posla i cijenom.',
   },
   {
     title: '3. Krećemo s radom',
-    icon: <Wrench className="w-5 h-5 text-blue-400" />,
+    icon: <Wrench className="w-5 h-5 text-secondary" />,
     description: 'Brzo i fokusirano provodimo rješenje, uz potpunu transparentnost u svakom koraku.',
   },
   {
     title: '4. Isporuka i podrška',
-    icon: <ThumbsUp className="w-5 h-5 text-blue-400" />,
+    icon: <ThumbsUp className="w-5 h-5 text-secondary" />,
     description: 'Isporučujemo, testiramo i pružamo podršku za konačni rezultat. Bez nedovršenih detalja.',
   },
 ];
@@ -28,7 +28,8 @@ const steps = [
 export function Process() {
   return (
     <section className="relative py-20">
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5 pointer-events-none" />
+      <div className="absolute inset-x-0 top-0 h-px bg-white" />
+      <div className="absolute inset-0 opacity-5 pointer-events-none" />
 
       <div className="relative px-4 max-w-4xl mx-auto sm:px-6 lg:px-8">
         <motion.div
@@ -38,11 +39,11 @@ export function Process() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
+            <span className="bg-clip-text text-white">
               Kako funkcionira
             </span>
           </h2>
-          <p className="mt-4 text-slate-400 text-lg">
+          <p className="mt-4 text-white text-lg">
             Lako razumljiv i jednostavan proces
           </p>
         </motion.div>
@@ -54,12 +55,12 @@ export function Process() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="flex items-start gap-4 bg-slate-900/50 border border-slate-800 rounded-xl p-6 backdrop-blur-md"
+              className="flex items-start gap-4 bg-primary/50 border border-secondary rounded-xl p-6 backdrop-blur-md"
             >
-              <div className="bg-blue-500/10 rounded-full p-2">{step.icon}</div>
+              <div className="bg-secondary/10 rounded-full p-2">{step.icon}</div>
               <div>
                 <h3 className="text-white font-medium text-base mb-1">{step.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{step.description}</p>
+                <p className="text-white text-sm leading-relaxed">{step.description}</p>
               </div>
             </motion.div>
           ))}

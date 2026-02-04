@@ -108,7 +108,7 @@ export default function CommissionsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-trybgr">
+    <div className="min-h-screen bg-primary">
       {/* Hero Section */}
       <section className="relative">
         <CommissionsHero />
@@ -130,7 +130,7 @@ export default function CommissionsPage() {
               Zašto Odabrati Nas?
             </motion.h2>
             <motion.p
-              className="mt-4 text-lg text-gray-400"
+              className="mt-4 text-lg text-white"
             >
               Posvećeni smo izradi vrhunskih personaliziranih proizvoda koji
               premašuju očekivanja.
@@ -148,15 +148,15 @@ export default function CommissionsPage() {
               <motion.div
                 key={quality.title}
                 whileHover={{ scale: 1.05 }}
-                className="rounded-lg border border-gray-700 bg-gray-800 p-6 text-center"
+                className="rounded-lg border border-secondary bg-primary/50 p-6 text-center"
               >
-                <div className="mx-auto flex size-12 items-center justify-center rounded-lg bg-blue-600">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-lg bg-secondary">
                   <quality.icon className="size-6 text-white" />
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-white">
                   {quality.title}
                 </h3>
-                <p className="mt-2 text-gray-400">{quality.description}</p>
+                <p className="mt-2 text-white">{quality.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -164,7 +164,7 @@ export default function CommissionsPage() {
       </section>
 
       {/* Steps Section */}
-      <section className="bg-trybgr py-20">
+      <section className="bg-light-blue py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -179,7 +179,7 @@ export default function CommissionsPage() {
               Kako Funkcionira?
             </motion.h2>
             <motion.p
-              className="mt-4 text-lg text-gray-400"
+              className="mt-4 text-lg text-white"
             >
               Jednostavan proces od ideje do gotovog proizvoda
             </motion.p>
@@ -197,24 +197,24 @@ export default function CommissionsPage() {
                   className="flex flex-col items-start gap-6 md:flex-row"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="flex size-16 items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white">
+                    <div className="flex size-16 items-center justify-center rounded-full bg-secondary text-lg font-bold text-white">
                       {step.number}
                     </div>
                     <div className="md:hidden">
-                      <step.icon className="size-8 text-blue-400" />
+                      <step.icon className="size-8 text-secondary" />
                     </div>
                   </div>
 
                   <div className="flex-1">
                     <div className="mb-4 flex items-center gap-4">
                       <div className="hidden md:block">
-                        <step.icon className="size-8 text-blue-400" />
+                        <step.icon className="size-8 text-secondary" />
                       </div>
                       <h3 className="text-2xl font-semibold text-white">
                         {step.title}
                       </h3>
                     </div>
-                    <p className="text-lg text-gray-400">{step.description}</p>
+                    <p className="text-lg text-white">{step.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -239,7 +239,7 @@ export default function CommissionsPage() {
               Naši Radovi
             </motion.h2>
             <motion.p
-              className="mt-4 text-lg text-gray-400"
+              className="mt-4 text-lg text-white"
             >
               Pogledajte neke od naših nedavno izrađenih personaliziranih
               proizvoda
@@ -259,20 +259,21 @@ export default function CommissionsPage() {
                 whileHover={{ y: -8 }}
                 className="group cursor-pointer"
               >
-                <div className="relative overflow-hidden rounded-lg border border-gray-700 bg-gray-800">
-                  <div className="flex aspect-[4/3] items-center justify-center bg-gray-700">
+                <div className="relative overflow-hidden rounded-lg border border-secondary bg-primary/50">
+                  <div className="flex aspect-[4/3] items-center justify-center bg-light-blue">
                     <Image
                       src={example.image}
                       alt={example.title}
                       width={600}
                       height={400}
+                      className="object-cover"
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-blue-400">
+                    <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-secondary">
                       {example.title}
                     </h3>
-                    <p className="mt-2 text-gray-400">{example.description}</p>
+                    <p className="mt-2 text-white">{example.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -282,7 +283,7 @@ export default function CommissionsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-trybgr py-20">
+      <section className="bg-light-gray py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -296,7 +297,7 @@ export default function CommissionsPage() {
               Spremni za Početak?
             </motion.h2>
             <motion.p
-              className="mx-auto mt-4 max-w-2xl text-lg text-gray-400"
+              className="mx-auto mt-4 max-w-2xl text-lg text-white"
             >
               Kontaktirajte nas danas i pretvorite svoju ideju u jedinstveni
               personalizirani proizvod koji će trajno oduševiti.
@@ -306,33 +307,33 @@ export default function CommissionsPage() {
               className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row"
             >
               <Link
-                href="/form"
-                className="flex items-center gap-3 rounded-lg bg-blue-600 px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-blue-700"
+                href="/form/komisija"
+                className="flex items-center gap-3 rounded-lg bg-secondary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-secondary-dark"
               >
                 <Zap className="size-5" />
                 Pošaljite Svoju Ideju
                 <ArrowRight className="size-5" />
               </Link>
 
-              <div className="flex items-center gap-2 text-gray-400">
-                <Heart className="size-5 text-red-400" />
+              <div className="flex items-center gap-2 text-white">
+                <Heart className="size-5 text-secondary" />
                 <span>100% zadovoljnih kupaca</span>
               </div>
             </motion.div>
 
             <motion.div
-              className="mt-8 flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500"
+              className="mt-8 flex flex-wrap items-center justify-center gap-8 text-sm text-white"
             >
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="size-4 text-green-400" />
+                <CheckCircle2 className="size-4 text-secondary" />
                 Besplatna konsultacija
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="size-4 text-green-400" />
+                <CheckCircle2 className="size-4 text-secondary" />
                 Brzi odgovori
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="size-4 text-green-400" />
+                <CheckCircle2 className="size-4 text-secondary" />
                 Konkurentne cijene
               </div>
             </motion.div>

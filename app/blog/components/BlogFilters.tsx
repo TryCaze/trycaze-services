@@ -31,13 +31,13 @@ export default function BlogFilters({
   };
 
   return (
-    <div className="mb-8 p-6 bg-gray-50 rounded-lg">
+    <div className="mb-8 p-6 bg-primary/50 rounded-lg border border-secondary">
       <div className="flex flex-wrap gap-4 items-center justify-between">
         <div className="flex flex-wrap gap-2">
           <select
             value={currentCategory || ''}
             onChange={(e) => updateFilters({ category: e.target.value })}
-            className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-2 border border-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary bg-primary text-white"
           >
             <option value="">All Categories</option>
             {categoryList.map(category => (
@@ -50,7 +50,7 @@ export default function BlogFilters({
           <select
             value={currentTag || ''}
             onChange={(e) => updateFilters({ tag: e.target.value })}
-            className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-2 border border-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary bg-primary text-white"
           >
             <option value="">All Tags</option>
             {tags.map(tag => (
@@ -64,7 +64,7 @@ export default function BlogFilters({
         {(currentCategory || currentTag) && (
           <button
             onClick={clearFilters}
-            className="px-4 py-2 text-blue-600 hover:text-blue-800 font-medium"
+            className="px-4 py-2 text-secondary hover:text-secondary-dark font-medium"
           >
             Clear Filters
           </button>
@@ -74,12 +74,12 @@ export default function BlogFilters({
       {(currentCategory || currentTag) && (
         <div className="mt-4 flex flex-wrap gap-2">
           {currentCategory && (
-            <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+            <span className="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">
               Category: {categories[currentCategory as keyof typeof categories] || currentCategory}
             </span>
           )}
           {currentTag && (
-            <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+            <span className="px-3 py-1 bg-secondary/10 text-white rounded-full text-sm">
               Tag: {currentTag}
             </span>
           )}

@@ -58,7 +58,7 @@ export default function CommissionsHero() {
         <motion.div initial="hidden" animate="visible" variants={containerVariants}>
           <motion.h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Naručite
-            <span className="text-blue-500"> Personalizirane </span>
+            <span className="text-secondary"> Personalizirane </span>
             Proizvode
           </motion.h1>
 
@@ -69,8 +69,8 @@ export default function CommissionsHero() {
 
           <motion.div className="mt-10 flex items-center justify-center gap-6">
             <Link
-              href="/form"
-              className="flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+              href="/form/komisija"
+              className="flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/40"
             >
               Naručite Sada
               <ArrowRight className="size-4" />
@@ -95,7 +95,7 @@ export default function CommissionsHero() {
             aria-label={`Go to slide ${index + 1}`}
             className={`
               size-3 rounded-full transition-all duration-300
-              ${index === currentBgIndex ? "scale-125 bg-blue-500" : "bg-gray-400 hover:bg-gray-300"}
+              ${index === currentBgIndex ? "scale-125 bg-primary-light" : "bg-gray-400 hover:bg-gray-300"}
             `}
           />
         ))}
