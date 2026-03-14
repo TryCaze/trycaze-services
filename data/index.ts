@@ -4,12 +4,14 @@ import { uporabaStarihRacunala } from './uporabaStarihRacunala';
 import { izborOperativnogSustava } from './blogs/izborOperativnogSustava';
 import { zapocetisa3DPrintanjem } from './blogs/zapocetisa3DPrintanjem';
 import { acctos } from './blogs/acctos';
+import { printanjeimodeliranje } from './blogs/3dPrintanjeiModeliranje';
+import { pearOS } from './blogs/pearOS';
 
 export const allBlogPosts: BlogPost[] = [
   uporabaStarihRacunala,
   izborOperativnogSustava,
-  zapocetisa3DPrintanjem,
   acctos,
+  pearOS
 ].filter(post => post.published);
 
 export function getBlogPost(slug: string): BlogPost | undefined {

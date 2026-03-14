@@ -18,6 +18,7 @@ import {
   Phone,
   MessageSquareDot,
   PrinterCheck,
+  FolderArchive,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -124,6 +125,12 @@ export function Navbar() {
             <MessageSquareDot className='mr-2' size={18} />  Blogovi
           </a>
           <a
+            href="/radovi"
+            className="flex items-center hover:bg-primary px-4 py-2 rounded-full transition-colors"
+          >
+            <FolderArchive className='mr-2' size={18} />  Radovi
+          </a>
+          <a
             href="mailto:trycaze@proton.me"
             className="flex items-center hover:bg-primary px-4 py-2 rounded-full transition-colors"
           >
@@ -209,6 +216,12 @@ export function Navbar() {
             >
               <MessageSquareDot className="mr-3" size={18}/> Blogovi
             </a>
+          <a
+            href="/radovi"
+            className="flex items-center hover:bg-primary px-4 py-2 rounded-full transition-colors"
+          >
+            <FolderArchive className='mr-2' size={18} />  Radovi
+          </a>
 
             <a
               href="mailto:trycaze@proton.me" 

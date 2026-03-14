@@ -5,6 +5,13 @@ interface BlogContentProps {
   content: BlogSection[];
 }
 
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-');
+}
+
 export default function BlogContent({ content }: BlogContentProps) {
   return (
     <div className="prose prose-lg max-w-none">
@@ -18,31 +25,34 @@ export default function BlogContent({ content }: BlogContentProps) {
             );
 
           case 'H1':
+            const h1Id = slugify(section.content)
             return (
-              <h1 key={index} className='mt-12 mb-6 first:mt-0 text-4xl font-bold text-white'>
+              <h1 id={h1Id} key={index} className='mt-12 mb-6 first:mt-0 text-4xl font-bold text-white scroll-mt-24'>
                 {section.content}
               </h1>
             )
 
           case 'H2':
+            const h2Id = slugify(section.content)
             return (
-              <h2 key={index} className="mt-12 mb-4 first:mt-0 text-3xl font-bold text-white">
+              <h2 id={h2Id} key={index} className="mt-12 mb-4 first:mt-0 text-3xl font-bold text-white scroll-mt-24">
                 {section.content}
               </h2>
             )
 
           case 'H3':
+            const h3Id = slugify(section.content)
             return (
-              <h3 key={index} className="mt-2 mb-2 first:mt-0 text-xl font-bold text-white">
+              <h3 id={h3Id} key={index} className="mt-2 mb-2 first:mt-0 text-xl font-bold text-white scroll-mt-24">
                 {section.content}
               </h3>
             )
 
           case 'list':
             return(
-              <div>
+              <div key={index}>
                 <p className="mb-6 leading-relaxed text-white">{section.content}</p>
-                <ul key={index} className="list-disc list-inside mb-6 text-white">
+                <ul className="list-disc list-inside mb-6 text-white">
                   {section.items?.map((item, itemIndex) => (
                     <li key={itemIndex} className="mb-2">
                       {item}
@@ -101,7 +111,7 @@ export default function BlogContent({ content }: BlogContentProps) {
           case 'link':
             return (
               <a key={index} href={section.content} className="text-secondary underline hover:text-secondary-dark">
-                {section.content}
+                {section.text}
               </a>
             );
           

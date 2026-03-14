@@ -152,75 +152,51 @@ const serviceTechnologies = [
   }
 ];
 
-
-export function TechnologyShowcase() {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+export default function TechnologySection() {
+  const { ref, inView } = useInView({ threshold: 0.1 });
   const [hoveredTool, setHoveredTool] = useState<string | null>(null);
 
   return (
-    <section 
-      id="technology" 
-      ref={ref}
-      className="relative py-16 sm:py-24 lg:py-32 overflow-hidden"
-    >
+    <section id="technology" ref={ref} className="relative py-16 sm:py-24 lg:py-32 overflow-visible">
+      {/* Keeping your original background elements exactly as they were */}
       <div className="absolute inset-x-0 top-0 h-px bg-white" />
-      {/* Background elements */}
       <div className="absolute inset-0 opacity-5" />
       <div className="absolute top-1/4 -left-20 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl opacity-10" />
       <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-indigo-500 rounded-full filter blur-3xl opacity-10" />
 
       <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        {/* Section header */}
+        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
           className="text-left max-w-3xl mx-auto mb-16 lg:mb-24"
         >
           <h2 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-            <span className="text-white">
-              Tehnologije koje koristimo
-            </span>
+            Tehnologije koje koristimo
           </h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.3 }}
-            className="mt-6 text-xl text-white"
-          >
+          <p className="mt-6 text-xl text-white">
             Tehnologije koje koristimo za pružanje vrhunskih usluga i rješenja.
-          </motion.p>
+          </p>
         </motion.div>
 
-        {/* Technology showcase */}
         <div className="space-y-16">
           {serviceTechnologies.map((service) => (
             <div key={service.id} className="space-y-8">
-              {/* Service category header */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.2 }}
-                className="flex items-center space-x-4"
-              >
+              <div className="flex items-center space-x-4">
                 <service.icon className="w-8 h-8 text-secondary" />
                 <h3 className="text-2xl font-bold text-white">{service.name}</h3>
-              </motion.div>
+              </div>
 
-              {/* Tools grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {service.tools.map((tool) => (
-                  <motion.div
+                  <div
                     key={`${service.id}-${tool.name}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5 }}
                     className="relative"
                     onMouseEnter={() => setHoveredTool(`${service.id}-${tool.name}`)}
                     onMouseLeave={() => setHoveredTool(null)}
                   >
-                    {/* Tool card */}
-                    <div className="h-full p-6 bg-primary rounded-xl cursor-pointer">
+                    {/* Tool card - Main base */}
+                    <div className="h-full p-6 bg-primary rounded-xl border border-transparent hover:border-secondary transition-colors duration-300">
                       <div className="flex items-center space-x-4">
                         <div className="p-3 bg-secondary rounded-lg">
                           <tool.icon className="w-6 h-6 text-white" />
@@ -230,42 +206,43 @@ export function TechnologyShowcase() {
                       <p className="mt-3 text-sm text-gray-200">{tool.shortDescription}</p>
                     </div>
 
-                    {/* Floating detail card - positioned above */}
+                    {/* Floating detail card - FIXED */}
                     <AnimatePresence>
                       {hoveredTool === `${service.id}-${tool.name}` && (
                         <motion.div
-                          initial={{ opacity: 0, y: -20 }}
-                          animate={{ opacity: 1, y: -10 }}
-                          exit={{ opacity: 0, y: -20 }}
-                          transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                          className="absolute z-10 left-0 right-0 mx-auto -top-44 w-full max-w-md h-64 shadow-2xl"
+                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: -12, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          transition={{ duration: 0.2, ease: "easeOut" }}
+                          // bottom-full ensures it sits above the base card regardless of height
+                          className="absolute z-[60] bottom-full left-0 right-0 mb-2 w-full pointer-events-auto"
                         >
-                          <div className="relative h-full w-full rounded-xl overflow-hidden bg-primary border border-slate-800">
-                            {/* Glass overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/20 backdrop-blur-sm p-6 flex flex-col">
-                              <div className="flex items-center space-x-4 mb-4">
-                                <div className="p-3 bg-secondary rounded-lg">
-                                  <tool.icon className="w-6 h-6 text-white" />
-                                </div>
-                                <h3 className="text-xl font-bold text-white">{tool.name}</h3>
+                          <div className="bg-primary border-2 border-secondary rounded-xl shadow-2xl overflow-hidden">
+                            <div className="p-5 flex flex-col">
+                              <div className="flex items-center space-x-3 mb-3">
+                                <tool.icon className="w-5 h-5 text-secondary" />
+                                <span className="font-bold text-white">{tool.name}</span>
                               </div>
-                              <div className="bg-secondary/30 rounded-lg p-4 backdrop-blur-sm flex-grow">
-                                <p className="text-white">
+                              
+                              <div className="bg-white/5 rounded-lg p-3 mb-3">
+                                <p className="text-sm text-gray-100 leading-relaxed">
                                   {tool.longDescription}
                                 </p>
                               </div>
+
                               <Link 
                                 href={tool.link}
-                                className="mt-4 inline-flex items-center text-sm font-medium text-secondary hover:text-secondary-dark"
+                                target="_blank"
+                                className="inline-flex items-center text-sm font-bold text-secondary hover:underline"
                               >
-                                Web stranica <ArrowRight className="ml-1 w-4 h-4" /> 
+                                Posjeti stranicu <ArrowRight className="ml-1 w-4 h-4" /> 
                               </Link>
                             </div>
                           </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>

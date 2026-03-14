@@ -28,4 +28,5 @@ export interface BlogSection {
     imageAlt?: string;
     language?: string; // for code blocks, not an actual language, idiot
     items?: string[]; // for list type
+    text?: string;
 }

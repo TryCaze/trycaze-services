@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import BlogContent from '../components/BlogContent';
 import RelatedPosts from '../components/RelatedPosts';
 import type { Metadata } from 'next';
+import TableOfContents from '../components/TableOfContents';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -21,9 +22,49 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const relatedPosts = getRelatedPosts(post);
 
+  const faqItems = post.content
+  .map((section, index) => {
+    if (
+      section.type === "H2" &&
+      post.content[index + 1]?.type === "paragraph"
+    ) {
+      return {
+        question: section.content,
+        answer: post.content[index + 1].content,
+      }
+    }
+    return null
+  })
+  .filter(Boolean)
+
   return (
     <>
-      <article className="container mx-auto px-4 py-8 max-w-4xl">
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
+      <div className="grid grid-cols-12 gap-10">
+        <aside className="lg:block col-span-3">
+          <TableOfContents content={post.content} />
+        </aside>
+
+        {faqItems.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqItems.map((faq) => ({
+                "@type": "Question",
+                name: faq?.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq?.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
+      <article className="col-span-12 lg:col-span-9 max-w-4xl">
         {/* Cover Image */}
         {post.coverImage && (
           <div className="mb-8 rounded-lg overflow-hidden">
@@ -53,7 +94,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             )}
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{post.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white tracking-wide">{post.title}</h1>
           <p className="text-lg text-white mb-6">{post.description}</p>
 
           {/* Author and Meta Info */}
@@ -104,7 +145,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             ))}
           </div>
         </div>
-      </article>
+      </article>    
+      </div>
+      </div>
 
       {relatedPosts.length > 0 && <RelatedPosts posts={relatedPosts} />}
     </>

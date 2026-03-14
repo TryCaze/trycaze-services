@@ -118,7 +118,7 @@ export function DetailedServices() {
                       collapsed: { height: 0, opacity: 0 },
                     }}
                     transition={{ duration: 0.4, ease: 'easeInOut' }}
-                    className="overflow-hidden px-6 pb-4 text-white text-sm tracking-wide"
+                    className="overflow-hidden px-6 pb-4 text-white text-sm tracking-wide leading-7"
                   >
                     {service.description}
                     <li>

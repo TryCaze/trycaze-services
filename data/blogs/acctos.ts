@@ -11,7 +11,7 @@ export const acctos: BlogPost = {
     categories: ['poslovno', 'it'],
     tags: ['python', 'open-source', 'računovodstvo'],
     published: true,
-    featured: true,
+    featured: false,
     readingTime: '10 min',
     coverImage: '/images/acctosicon.svg',
     metadata: {

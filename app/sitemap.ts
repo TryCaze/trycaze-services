@@ -4,7 +4,6 @@ import type { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://trycaze-services.vercel.app';
 
-  // Statične stranice
   const staticPages: MetadataRoute.Sitemap = [
     '',
     '/o-nama',
@@ -16,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/3dprintanje',
     '/izrada-web-stranica',
     '/blog',
+    '/radovi'
   ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date().toISOString(),
@@ -23,7 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === '' ? 1 : 0.8,
   }));
 
-  // Dinamične stranice — tvoji blog postovi iz data foldera
   const blogPages: MetadataRoute.Sitemap = allBlogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: post.updatedAt

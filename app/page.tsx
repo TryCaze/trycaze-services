@@ -4,7 +4,7 @@ import { ServicesSection } from "./components/importance";
 import { Services } from "./components/services";
 import { Testimonials } from "./components/testemonials";
 import { CaseStudies } from "./components/case-studies";
-import { TechnologyShowcase } from "./components/technology";
+import TechnologyShowcase from "./components/technology";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
