@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://trycaze-services.vercel.app/sitemap.xml
+Sitemap: https://trycaze.vercel.app/sitemap.xml

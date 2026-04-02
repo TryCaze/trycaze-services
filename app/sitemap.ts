@@ -2,7 +2,7 @@ import { allBlogPosts } from '@/data';
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://trycaze-services.vercel.app';
+  const baseUrl = 'https://trycaze.vercel.app/';
 
   const staticPages: MetadataRoute.Sitemap = [
     '',
