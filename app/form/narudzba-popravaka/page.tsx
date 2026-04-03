@@ -109,8 +109,7 @@ const DEVICE_TYPES = [
 
 // Common brands
 const DEVICE_BRANDS = [
-  'HP', 'Dell', 'Lenovo', 'Asus', 'Acer', 'Apple', 'MSI', 'Samsung', 'Toshiba',
-  'Epson', 'Canon', 'Brother', 'Xerox', 'Microsoft', 'Razer', 'Logitech', 'Ostalo'
+  'Acer', 'Apple', 'Asus', 'Brother', 'Canon', 'Dell', 'Epson', 'HP', 'Lenovo', 'Logitech', 'Microsoft', 'MSI', 'Razer', 'Samsung', 'Toshiba', 'Xerox', 'Ostalo'
 ];
 
 // Warranty status

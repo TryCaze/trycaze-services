@@ -99,6 +99,7 @@ const USAGE_TYPES = [
   { value: 'creative', label: 'Kreativni rad', icon: <Palette className="size-4" /> },
   { value: 'streaming', label: 'Streaming/Video', icon: <Video className="size-4" /> },
   { value: 'general', label: 'Opća upotreba', icon: <Laptop className="size-4" /> },
+  { value: 'other', label: 'Ostalo', icon: <Cloud className="size-4" /> },
 ];
 
 const OS_TYPES = ['Windows', 'Linux', 'macOS', 'Nije potrebno', 'Nisam siguran'];
