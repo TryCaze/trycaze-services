@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TryCaze Services
 
-## Getting Started
+Ovo je službeni repozitorij za **TryCaze** web stranicu, mjesto gdje predstavljamo što radimo i koje usluge nudimo.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## O nama
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+TryCaze je mali tim koji se bavi IT-om, razvojem i praktičnim rješenjima za svakodnevne probleme, bilo za firme ili pojedince.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Fokus nam je na tome da stvari **rade kako treba**, bez nepotrebne komplikacije.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Što radimo
 
-To learn more about Next.js, take a look at the following resources:
+### Poslovne usluge
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Rješenja za poduzeća**  
+Radimo prilagođena rješenja za poslovne potrebe.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**IT podrška**  
+Pomažemo oko IT infrastrukture i korisničkih problema od sitnica do većih kvarova.
 
-## Deploy on Vercel
+**Popravci i održavanje**  
+Popravljamo računala i održavamo sustave kako bi trajali što duže i radili bez problema.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Postavljanje sustava**  
+Instalacija i konfiguracija računala, mreža i radnih okruženja.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### Ostale usluge
+
+**3D printanje**  
+Izrada 3D modela i printanje fizičkih objekata po narudžbi.
+
+**Razvoj web aplikacija**  
+Izrada web aplikacija i raznih digitalnih rješenja, ovisno o potrebama.
+
+---
+
+## O ovom repozitoriju
+
+Ovdje se nalazi kod za našu web stranicu koja služi za:
+
+- predstavljanje usluga  
+- osnovne informacije o nama  
+- online prisutnost  
+
+---
+
+## Ukratko
+
+Radimo IT stvari bez filozofiranja — cilj nam je da rješenja budu **jednostavna, korisna i dugoročno održiva**.
+
+---
+
+## Kontakt
+
+Ako te zanima suradnja ili imaš neko pitanje, javi se preko naše web stranice ili na email: [trycaze@proton.me](mailto:trycaze@proton.me)
