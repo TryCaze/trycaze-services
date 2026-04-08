@@ -1,7 +1,8 @@
 'use client';
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight, Calendar, MapPin, Phone } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { GiOpenBook } from 'react-icons/gi';
 
 export function HeroSection() {
   return (
@@ -9,8 +10,8 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
           <Image
-            src="https://images.pexels.com/photos/8865186/pexels-photo-8865186.jpeg"
-            alt="3D Print Background"
+            src="https://gkpz.hr/wp-content/uploads/2026/04/3-scaled.jpg"
+            alt="3D Print Radionica"
             fill
             className="object-cover blur-none opacity-10 scale-125"
             priority
@@ -24,7 +25,7 @@ export function HeroSection() {
           className="w-full text-deep-purple-800"
           viewBox="0 0 1200 180"
           preserveAspectRatio="none"
-          style={{ height: "180px" }}
+          style={{ height: "180px", width: "100%" }}
         >
           <path
             fill="currentColor"
@@ -49,7 +50,7 @@ export function HeroSection() {
                 transition={{ delay: 0.15 }}
                 className="inline-flex items-center px-4 py-2 bg-secondary rounded-full border-0 shadow-lg"
               >
-                <span className="text-sm font-semibold text-white">3D Printanje</span>
+                <span className="text-sm font-semibold text-white">Osvrt na radionicu</span>
               </motion.div>
 
               <motion.h1
@@ -59,22 +60,33 @@ export function HeroSection() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
               >
                 <span className="block mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  3D Print usluge
+                  3D Print & Modeliranje
                 </span>
                 <span className="block text-2xl md:text-3xl lg:text-4xl font-semibold text-white">
-                  Brza izrada prototipova i personaliziranih proizvoda
+                  Prva uspješna radionica u Požegi
                 </span>
               </motion.h1>
 
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.45 }}
-                className="text-lg md:text-xl text-white max-w-lg leading-relaxed"
+                className="space-y-4"
               >
-                Nudimo visokokvalitetne 3D print usluge za vaše projekte od ideje do gotovog proizvoda. 
-                Iskoristite prednosti moderne tehnologije za izradu prototipova, maketa, rezervnih dijelova i personaliziranih predmeta.
-              </motion.p>
+                <p className="text-lg md:text-xl text-white max-w-lg leading-relaxed">
+                  Uspješno smo održali prvu radionicu 3D modeliranja i printanja u Gradskoj knjižnici Požega. Polaznici su kroz četiri dana intenzivnog rada savladali osnove 3D dizajna, pripremu modela za print i praktičan rad na 3D printerima.
+                </p>
+                <div className="flex flex-col space-y-2 text-white/90">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-5 h-5 text-teal-accent-400" />
+                    <span>30. ožujka — 2. travnja</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-teal-accent-400" />
+                    <span>Gradska knjižnica Požega</span>
+                  </div>
+                </div>
+              </motion.div>
 
               <motion.ul className="text-white space-y-3 max-w-md">
                 <motion.li 
@@ -84,7 +96,7 @@ export function HeroSection() {
                   className="flex items-center gap-3"
                 >
                   <div className="w-2 h-2 bg-teal-accent-400 rounded-full" />
-                  <span>Brza i precizna izrada 3D modela</span>
+                  <span> - Osnove 3D dizajna i Tinkercad-a</span>
                 </motion.li>
                 <motion.li 
                   initial={{ opacity: 0, x: -20 }}
@@ -93,7 +105,7 @@ export function HeroSection() {
                   className="flex items-center gap-3"
                 >
                   <div className="w-2 h-2 bg-teal-accent-400 rounded-full" />
-                  <span>Različiti materijali i boje</span>
+                  <span> - Priprema modela za print (Slicing)</span>
                 </motion.li>
                 <motion.li 
                   initial={{ opacity: 0, x: -20 }}
@@ -102,7 +114,7 @@ export function HeroSection() {
                   className="flex items-center gap-3"
                 >
                   <div className="w-2 h-2 bg-teal-accent-400 rounded-full" />
-                  <span>Podrška od ideje do realizacije</span>
+                  <span> - Praktičan rad na 3D printerima</span>
                 </motion.li>
               </motion.ul>
 
@@ -115,11 +127,11 @@ export function HeroSection() {
                 <motion.a
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
-                  href="/usluge/3dprintanje"
-                  className="flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:from-teal-accent-500 hover:to-light-blue-500"
+                  href="/galerija"
+                  className="flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <ArrowRight className="w-5 h-5" />
-                  <span className="text-lg">Saznaj više</span>
+                  <span className="text-lg">Pročitaj članak</span>
                 </motion.a>
 
                 <motion.a
@@ -141,44 +153,39 @@ export function HeroSection() {
               className="relative"
             >
               <div className="bg-primary backdrop-blur-sm rounded-2xl shadow-2xl p-8 sm:p-10 border border-secondary">
-                <h3 className="mb-6 text-2xl font-bold text-center text-white sm:text-3xl">
-                  O NAŠOJ 3D PRINT USLUZI
+                <h3 className="mb-6 text-2xl font-bold text-center text-white sm:text-3xl uppercase tracking-wide">
+                  Rezultati radionice
                 </h3>
                 
                 <div className="space-y-6">
-                  <motion.a 
-                    href="usluge/3dprintanje"
-                    whileHover={{ x: 8 }}
-                    className="block group"
-                  >
-                    <div className="p-6 bg-secondary-dark transition-all duration-300">
+                  <div className="block group">
+                    <div className="p-6 bg-secondary-dark transition-all duration-300 rounded-lg">
                       <div className="flex items-center gap-3 mb-3">
                         <div className="px-3 py-1 bg-teal-accent-400/10 rounded-full">
-                          <span className="text-sm font-semibold text-teal-accent-400"></span>
+                          <span className="text-sm font-semibold text-white">Požega 2024</span>
                         </div>
-                        <span className="text-sm text-white">Profesionalna usluga</span>
+                        <span className="text-sm text-white">Edukacija</span>
                       </div>
-                      <h4 className="text-xl font-bold text-white mb-2 group-hover:text-teal-accent-400 transition-colors">
-                        3D Printanje po narudžbi
+                      <h4 className="text-xl font-bold text-white mb-2">
+                        Od ideje do stvarnosti
                       </h4>
-                      <p className="text-white mb-4">
-                        Prilagodite svoj projekt uz našu stručnu podršku i naprednu 3D print tehnologiju. 
-                        Idealno za prototipove, makete, personalizirane poklone i više.
+                      <p className="text-white/80 mb-4">
+                        Kroz četiri dana intenzivnog učenja, polaznici su savladali proces kreiranja digitalnih objekata i njihovo pretvaranje u fizičke predmete.
                       </p>
                       <div className="flex items-center text-white font-medium">
-                        <span>Saznaj više</span>
-                        <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" />
+                        <span>Hvala svim polaznicima!</span>
                       </div>
                     </div>
-                  </motion.a>
+                  </div>
                 </div>
 
                 <motion.a
-                  href="/usluge"
+                  href="/blog/radionica-3d-printanje-i-3d-modeliranje"
                   whileHover={{ scale: 1.02 }}
                   className="block w-full mt-8 px-6 py-3 text-center font-semibold text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all duration-300 border border-gray-300"
                 >
-                  Vidi sve usluge
+                  <GiOpenBook className="inline w-5 h-5 mr-2 text-gray-600" />
+                  Pročitaj cijeli članak
                 </motion.a>
               </div>
 

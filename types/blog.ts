@@ -23,7 +23,7 @@ export interface BlogPost {
 }
 
 export interface BlogSection {
-    type: 'subtitle' | 'H1' | 'H2' | 'H3' | 'list' | 'paragraph' | 'image' | 'code' | 'quote' | 'link';
+    type: 'subtitle' | 'H1' | 'H2' | 'H3' | 'list' | 'paragraph' | 'image' | 'code' | 'quote' | 'link' | 'groupImages';
     content: string;
     imageAlt?: string;
     language?: string; // for code blocks, not an actual language, idiot

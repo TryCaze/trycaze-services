@@ -78,7 +78,7 @@ export default function TableOfContents({ content }: Props) {
       <AnimatePresence>
         {!isOpen && (
           <motion.button
-            layoutId="toc-container" // Shared ID for morphing
+            layoutId="toc-container"
             onClick={() => setIsOpen(true)}
             className="lg:hidden fixed bottom-8 left-6 z-40
             w-14 h-14 rounded-2xl bg-secondary text-white
@@ -108,7 +108,7 @@ export default function TableOfContents({ content }: Props) {
             />
 
             <motion.div
-              layoutId="toc-container" // Matching ID
+              layoutId="toc-container"
               drag="y"
               dragConstraints={{ top: 0 }}
               dragElastic={0.1}
@@ -117,48 +117,42 @@ export default function TableOfContents({ content }: Props) {
               }}
               className="
                 relative bg-[#0f0f0f] border-t border-white/10
-                rounded-t-[2.5rem] px-8 pt-4 pb-12
-                max-h-[85vh] overflow-hidden shadow-2xl touch-none
+                rounded-t-[2.5rem] px-6 pt-4 pb-12
+                max-h-[85vh] shadow-2xl touch-none
               "
             >
-              <div className="w-12 h-1.5 bg-white/20 rounded-full mx-auto mb-8" />
+              <div className="w-12 h-1.5 bg-white/20 rounded-full mx-auto mb-6" />
 
-              <motion.div 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
-                transition={{ delay: 0.2 }}
-              >
-                <div className="flex justify-between items-center mb-8">
-                  <h3 className="text-lg font-semibold text-white tracking-tight">Sadržaj</h3>
-                  <button onClick={() => setIsOpen(false)} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40">✕</button>
-                </div>
+              <div className="flex justify-between items-center mb-6 px-2">
+                <h3 className="text-lg font-semibold text-white tracking-tight">Sadržaj</h3>
+                <button onClick={() => setIsOpen(false)} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40">✕</button>
+              </div>
 
-                <nav className="overflow-y-auto max-h-[60vh] pr-2 pointer-events-auto custom-scrollbar">
-                  <ul className="space-y-1">
-                    {headings.map((heading, index) => {
-                      const id = slugify(heading.content)
-                      const isActive = activeId === id
-                      return (
-                        <motion.li 
-                          key={index}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.1 + index * 0.03 }}
+              <nav className="overflow-y-auto max-h-[60vh] px-2 pointer-events-auto">
+                <ul className="space-y-1">
+                  {headings.map((heading, index) => {
+                    const id = slugify(heading.content)
+                    const isActive = activeId === id
+                    return (
+                      <motion.li 
+                        key={index}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 + index * 0.03 }}
+                      >
+                        <a
+                          href={`#${id}`}
+                          onClick={(e) => { e.preventDefault(); scrollToHeading(id); setIsOpen(false); }}
+                          className={`group flex items-center py-3 rounded-xl transition-all ${heading.type === 'H3' ? 'ml-6 text-sm' : 'text-base font-medium'} ${isActive ? 'text-secondary bg-secondary/10 px-4' : 'text-white/60 hover:bg-white/5 px-4'}`}
                         >
-                          <a
-                            href={`#${id}`}
-                            onClick={(e) => { e.preventDefault(); scrollToHeading(id); setIsOpen(false); }}
-                            className={`group flex items-center py-3 rounded-xl transition-all ${heading.type === 'H3' ? 'ml-6 text-sm' : 'text-base font-medium'} ${isActive ? 'text-secondary bg-secondary/10 px-4' : 'text-white/60'}`}
-                          >
-                            <span className={`w-1.5 h-1.5 rounded-full mr-3 ${isActive ? 'bg-secondary' : 'bg-white/10'}`} />
-                            {heading.content}
-                          </a>
-                        </motion.li>
-                      )
-                    })}
-                  </ul>
-                </nav>
-              </motion.div>
+                          <span className={`w-1.5 h-1.5 rounded-full mr-3 flex-shrink-0 ${isActive ? 'bg-secondary' : 'bg-white/10'}`} />
+                          <span className="break-words">{heading.content}</span>
+                        </a>
+                      </motion.li>
+                    )
+                  })}
+                </ul>
+              </nav>
             </motion.div>
           </div>
         )}

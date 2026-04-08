@@ -1,17 +1,15 @@
 import { BlogPost } from '@/types/blog';
 import { categories } from './categories';
-import { uporabaStarihRacunala } from './uporabaStarihRacunala';
 import { izborOperativnogSustava } from './blogs/izborOperativnogSustava';
-import { zapocetisa3DPrintanjem } from './blogs/zapocetisa3DPrintanjem';
 import { acctos } from './blogs/acctos';
-import { printanjeimodeliranje } from './blogs/3dPrintanjeiModeliranje';
 import { pearOS } from './blogs/pearOS';
+import { radionica3Dprintanje } from './blogs/radionica3Dprintanje';
 
 export const allBlogPosts: BlogPost[] = [
-  uporabaStarihRacunala,
   izborOperativnogSustava,
   acctos,
-  pearOS
+  pearOS,
+  radionica3Dprintanje
 ].filter(post => post.published);
 
 export function getBlogPost(slug: string): BlogPost | undefined {

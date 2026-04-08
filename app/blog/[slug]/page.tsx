@@ -40,7 +40,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <>
       <div className="container mx-auto px-4 py-8 max-w-7xl">
-      <div className="grid grid-cols-12 gap-10">
+      <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-10">
         <aside className="lg:block col-span-3">
           <TableOfContents content={post.content} />
         </aside>
@@ -64,7 +64,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           }}
         />
       )}
-      <article className="col-span-12 lg:col-span-9 max-w-4xl">
+      <article className="w-full col-span-12 lg:col-span-9 max-w-full lg:max-w-4xl overflow-hidden">
         {/* Cover Image */}
         {post.coverImage && (
           <div className="mb-8 rounded-lg overflow-hidden">

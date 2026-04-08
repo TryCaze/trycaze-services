@@ -1,5 +1,10 @@
+'use client';
+
 import { BlogSection } from '@/types/blog';
 import Image from 'next/image';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Maximize2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface BlogContentProps {
   content: BlogSection[];
@@ -10,6 +15,108 @@ function slugify(text: string) {
     .toLowerCase()
     .replace(/[^\w\s-]/g, '')
     .replace(/\s+/g, '-');
+}
+
+function ImageGrid({ images, imageAlt }: { images: string[], imageAlt?: string }) {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const nextImage = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setSelectedIndex((prev) => (prev !== null ? (prev + 1) % images.length : 0));
+  };
+
+  const prevImage = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setSelectedIndex((prev) => (prev !== null ? (prev - 1 + images.length) % images.length : images.length - 1));
+  };
+
+  return (
+    <div className="my-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {images.map((imgSrc, imgIndex) => (
+          <motion.div
+            key={imgIndex}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group border border-white/10 shadow-md transition-all duration-300"
+            onClick={() => setSelectedIndex(imgIndex)}
+          >
+            <Image
+              src={imgSrc}
+              alt={`${imageAlt || 'Slika'} ${imgIndex + 1}`}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <Maximize2 className="text-white w-8 h-8 transform scale-75 group-hover:scale-100 transition-transform duration-300" />
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {imageAlt && (
+        <p className="text-white/60 text-sm mt-4 italic text-center border-t border-white/10 pt-2">
+          {imageAlt}
+        </p>
+      )}
+
+      <AnimatePresence>
+        {selectedIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/40 flex items-center justify-center p-4 md:p-10 backdrop-blur-sm"
+            onClick={() => setSelectedIndex(null)}
+          >
+            <button 
+              className="absolute top-6 right-6 text-white/70 hover:text-white p-2 hover:bg-white/10 rounded-full z-[110] transition-all"
+              onClick={() => setSelectedIndex(null)}
+            >
+              <X className="w-8 h-8" />
+            </button>
+
+            <button 
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-3 hover:bg-white/10 rounded-full z-[110] transition-all"
+              onClick={prevImage}
+            >
+              <ChevronLeft className="w-10 h-10" />
+            </button>
+
+            <motion.div 
+              key={selectedIndex}
+              initial={{ opacity: 0, scale: 0.9, x: 50 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0.9, x: -50 }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="relative w-full h-full max-w-5xl max-h-[85vh] flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={images[selectedIndex]}
+                alt="Fullscreen view"
+                fill
+                className="object-contain"
+                priority
+              />
+            </motion.div>
+
+            <button 
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-3 hover:bg-white/10 rounded-full z-[110] transition-all"
+              onClick={nextImage}
+            >
+              <ChevronRight className="w-10 h-10" />
+            </button>
+
+            <div className="absolute bottom-8 text-white/50 font-mono tracking-widest">
+              {selectedIndex + 1} / {images.length}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
 }
 
 export default function BlogContent({ content }: BlogContentProps) {
@@ -71,13 +178,13 @@ export default function BlogContent({ content }: BlogContentProps) {
           
           case 'image':
             return (
-              <div key={index} className="my-8">
+              <div key={index} className="my-8 w-full">
                 <div className="relative w-full h-64 md:h-96 bg-light-blue rounded-lg overflow-hidden">
                   <Image
                     src={section.content}
                     alt={section.imageAlt || 'Blog image'}
                     fill
-                    className="object-cover"
+                    className="object-contain" // Changed from object-cover to object-contain
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
                   />
                 </div>
@@ -113,6 +220,19 @@ export default function BlogContent({ content }: BlogContentProps) {
               <a key={index} href={section.content} className="text-secondary underline hover:text-secondary-dark">
                 {section.text}
               </a>
+            );
+
+          case 'groupImages':
+            return (
+              <div key={index}>
+              <h3 className="mt-2 mb-2 first:mt-0 text-3xl font-bold text-white scroll-mt-24">
+                {section.content}
+              </h3>
+                <ImageGrid  
+                  images={section.items || []} 
+                  imageAlt={section.imageAlt} 
+                />
+              </div>
             );
           
           default:
