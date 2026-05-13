@@ -1,4 +1,3 @@
-import { CaseStudies } from "./components/case-studies";
 import { Cta } from "./components/cta";
 import { DetailedServices } from "./components/detailed";
 import { Faq } from "./components/faq";
@@ -50,7 +49,6 @@ export default function Services() {
         <Hero />
         <ServicesSummary />
         <DetailedServices />
-        <CaseStudies />
         <Process />
         <Faq />
         <Cta />

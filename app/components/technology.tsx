@@ -160,9 +160,6 @@ export default function TechnologySection() {
     <section id="technology" ref={ref} className="relative py-16 sm:py-24 lg:py-32 overflow-visible">
       {/* Keeping your original background elements exactly as they were */}
       <div className="absolute inset-x-0 top-0 h-px bg-white" />
-      <div className="absolute inset-0 opacity-5" />
-      <div className="absolute top-1/4 -left-20 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl opacity-10" />
-      <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-indigo-500 rounded-full filter blur-3xl opacity-10" />
 
       <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Header Section */}

@@ -9,7 +9,8 @@ import {
   Monitor,
   Smartphone,
   Server,
-  ArrowRight
+  ArrowRight,
+  GraduationCap
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -64,7 +65,7 @@ function AboutHero() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="max-w-2xl mx-auto mt-6 text-lg text-white"
           >
-            Jedino sigurno mjesto za Vaša tehnološka rješenja
+            Brišemo ne iz (ne)popravljivo
           </motion.p>
           
           <motion.div
@@ -74,7 +75,7 @@ function AboutHero() {
             className="mt-10"
           >
             <Image 
-              src="/images/logo.svg" 
+              src="/images/trylogo.png" 
               alt="logo" 
               width={800} 
               height={450}
@@ -108,12 +109,12 @@ function OurStory() {
       descriptionKey: 'Otvaranje nove grane koja se bavi tehnologijom 3D printanja.',
       icon: Monitor 
     },
-    { 
-      year: '2025', 
-      titleKey: 'Prvo veliko istraživanje',
-      descriptionKey: 'Naše prvo veliko istraživanje u vezi pitanja da li je Linux dobra alternativa za svakodnevni operativni sustav.',
-      icon: Server 
-    },
+    {
+      year: '2026',
+      titleKey: 'Radionica o 3D printanju',
+      descriptionKey: 'Naša prva radionica o 3D printanju u Gradskoj knjižnici Požega',
+      icon: GraduationCap
+    }
   ];
 
   return (
@@ -176,7 +177,7 @@ function CoreValues() {
     { 
       icon: Lightbulb,
       titleKey: 'Inovacije',
-      descriptionKey: 'Proširiti naše inovativne mogučnosti.'
+      descriptionKey: 'Proširiti naše mogučnosti.'
     },
     { 
       icon: Users,
@@ -251,7 +252,7 @@ function AboutCTA() {
           Javite nam se <ArrowRight size={18} />
         </Link>
                 <Link
-          href="mailto:trycaze@proton.me"
+          href="/usluge"
           className="inline-flex items-center gap-2 bg-light-blue text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition"
         >
           Usluge <ArrowRight size={18} />

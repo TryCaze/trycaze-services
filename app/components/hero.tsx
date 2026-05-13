@@ -188,20 +188,6 @@ export function HeroSection() {
                   Pročitaj cijeli članak
                 </motion.a>
               </div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 0.3, scale: 1 }}
-                transition={{ delay: 0.4 }}
-                className="absolute -bottom-8 -right-8 w-64 h-64 z-0"
-              >
-                <Image
-                  src="/images/3dprint-icon.svg"
-                  alt="3D Print Pattern"
-                  fill
-                  className="object-contain opacity-30"
-                />
-              </motion.div>
             </motion.div>
           </div>
         </div>
